@@ -14,17 +14,19 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"mr-odd.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"mr-odd.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"manual"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="Linux下环境配置Miniconda安装这个非常简单，直接去官网下载shell脚本，然后安装即可，记得使用conda init初始化bash，这样每次登录shell就会自动进入conda环境… 源配置选取北京外国语大学的源（清华源有的时候会卡，不过北外的源也是清华维护，不知道是什么原因）： 123456789101112131415channels:  - defaultsshow_channe">
 <meta property="og:type" content="article">
 <meta property="og:title" content="环境配置问题">
 <meta property="og:url" content="https://mr-odd.github.io/2023/02/05/Misc/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/index.html">
-<meta property="og:site_name" content="Odd的博客">
+<meta property="og:site_name" content="Just an Odd">
 <meta property="og:description" content="Linux下环境配置Miniconda安装这个非常简单，直接去官网下载shell脚本，然后安装即可，记得使用conda init初始化bash，这样每次登录shell就会自动进入conda环境… 源配置选取北京外国语大学的源（清华源有的时候会卡，不过北外的源也是清华维护，不知道是什么原因）： 123456789101112131415channels:  - defaultsshow_channe">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/Pasted%2520image%252020221112201609.png">
@@ -48,7 +50,7 @@
   };
 </script>
 
-  <title>环境配置问题 | Odd的博客</title>
+  <title>环境配置问题 | Just an Odd</title>
   
 
 
@@ -99,7 +101,7 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Odd的博客</h1>
+      <h1 class="site-title">Just an Odd</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -139,6 +141,8 @@
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
 
 
     <main class="main">
@@ -162,7 +166,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Odd的博客">
+      <meta itemprop="name" content="Just an Odd">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -244,12 +248,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2023/02/04/Machine%20Learning/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8F%82%E5%8A%A0%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%AF%94%E8%B5%9B%E7%BB%8F%E9%AA%8C/" rel="prev" title="第一次参加机器学习比赛经验">
-      <i class="fa fa-chevron-left"></i> 第一次参加机器学习比赛经验
+    <a href="/2023/02/08/Misc/WSL/" rel="prev" title="WSL">
+      <i class="fa fa-chevron-left"></i> WSL
     </a></div>
       <div class="post-nav-item">
-    <a href="/2023/02/05/Misc/WSL/" rel="next" title="">
-       <i class="fa fa-chevron-right"></i>
+    <a href="/2023/02/04/Machine%20Learning/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8F%82%E5%8A%A0%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%AF%94%E8%B5%9B%E7%BB%8F%E9%AA%8C/" rel="next" title="第一次参加机器学习比赛经验">
+      第一次参加机器学习比赛经验 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -333,6 +337,14 @@
       </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Mr-Odd" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Mr-Odd" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:oddm7299@gmail.com" title="E-Mail → mailto:oddm7299@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
@@ -361,7 +373,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Odd</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
   </div>
 
         
@@ -379,6 +391,10 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 
@@ -392,6 +408,67 @@
 
 <script src="/js/next-boot.js"></script>
 
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
 
 
 
@@ -411,9 +488,11 @@
 
 
 
+    <div id="pjax">
   
 
   
 
+    </div>
 </body>
 </html>

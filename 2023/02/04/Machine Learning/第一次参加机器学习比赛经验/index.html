@@ -208,7 +208,7 @@
 <li>训练集和测试集的特征是否相同？<br> 对于那些特征分布不同的特征，我们需要加以修改，比如给定一个bool值，设置区间进行判断，或者直接drop分布不同的特征（因为添加他们可能在训练集上效果好，但是在测试集上是欠拟合的）</li>
 <li>训练集中是否有异常的特征数据？<br> 异常的特征数据会扰乱我们的模型，因此我们需要将它们完全剔除</li>
 </ol>
-<h1 id="几个模型比一个模型好"><a href="#几个模型比一个模型好" class="headerlink" title="几个模型比一个模型好"></a>几个模型比一个模型好</h1><p>如果一个模型的泛化性能很差，可以考虑不同的几个模型，放在一起设置权重预测，就像这样（请忽略这段代码的冗余，关注它们放在一起预测的思想）：<br><img src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230204205744.png" alt="image.png"></p>
+<h1 id="几个模型比一个模型好"><a href="#几个模型比一个模型好" class="headerlink" title="几个模型比一个模型好"></a>几个模型比一个模型好</h1><p>如果一个模型的泛化性能很差，可以考虑不同的几个模型，放在一起设置权重预测，就像这样（请忽略这段代码的冗余，关注它们放在一起预测的思想）：<br><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230204205744.png" alt="image.png"></p>
 <h1 id="线下baseline很重要"><a href="#线下baseline很重要" class="headerlink" title="线下baseline很重要"></a>线下baseline很重要</h1><ol>
 <li>如果可以交叉验证，那就使用交叉验证</li>
 <li>如果模型过拟合，要及时停止，或者调整参数</li>

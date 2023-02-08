@@ -149,7 +149,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://mr-odd.github.io/2023/02/08/Math/%E7%9F%A9%E9%98%B5%E8%AE%BA/">
+    <link itemprop="mainEntityOfPage" href="https://mr-odd.github.io/2023/02/09/Math/%E7%9F%A9%E9%98%B5%E8%AE%BA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -163,7 +163,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2023/02/08/Math/%E7%9F%A9%E9%98%B5%E8%AE%BA/" class="post-title-link" itemprop="url">矩阵论</a>
+            <a href="/2023/02/09/Math/%E7%9F%A9%E9%98%B5%E8%AE%BA/" class="post-title-link" itemprop="url">矩阵论</a>
         </h2>
 
         <div class="post-meta">
@@ -172,23 +172,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2023-02-08 15:00:39" itemprop="dateCreated datePublished" datetime="2023-02-08T15:00:39+08:00">2023-02-08</time>
+              <time title="Created: 2023-02-09 00:44:40 / Modified: 00:44:59" itemprop="dateCreated datePublished" datetime="2023-02-09T00:44:40+08:00">2023-02-09</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-02-09 00:00:47" itemprop="dateModified" datetime="2023-02-09T00:00:47+08:00">2023-02-09</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">数学基础知识</span></a>
+                  <a href="/categories/Math/" itemprop="url" rel="index"><span itemprop="name">Math</span></a>
                 </span>
             </span>
 
@@ -203,93 +197,190 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Chapter-1-线性空间与内积空间"><a href="#Chapter-1-线性空间与内积空间" class="headerlink" title="Chapter 1 线性空间与内积空间"></a>Chapter 1 线性空间与内积空间</h1><h2 id="线性空间"><a href="#线性空间" class="headerlink" title="线性空间"></a>线性空间</h2><h3 id="数域的定义"><a href="#数域的定义" class="headerlink" title="数域的定义"></a>数域的定义</h3><p>简单来说就是P对<strong>四则运算封闭</strong>，则称$P$为一个数域<br><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207173316.png" alt="image.png"></p>
-<h3 id="线性空间的概念"><a href="#线性空间的概念" class="headerlink" title="线性空间的概念"></a>线性空间的概念</h3><ol>
-<li><p>给定非空集合$V$，数域$P$</p>
-</li>
-<li><p>在$V$中定义了一种运算，称为加法，记为$\alpha + \beta$</p>
-</li>
-<li><p>在$V$与$P$之间定义了另一种运算，称为数乘，记为$k \alpha$</p>
-</li>
-<li><p>如果这两种运算关于$V$封闭，并且满足以下8条运算规律，则称$V$是$P$上的一个线性空间</p>
-<p> <img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207174656.png" alt="image.png"></p>
-</li>
+          <h1 id="chapter-1-线性空间与内积空间">Chapter 1 线性空间与内积空间</h1>
+<h2 id="线性空间">线性空间</h2>
+<h3 id="数域的定义">数域的定义</h3>
+<p>简单来说就是P对<strong>四则运算封闭</strong>，则称<span
+class="math inline">\(P\)</span>为一个数域 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207173316.png"
+alt="image.png" /></p>
+<h3 id="线性空间的概念">线性空间的概念</h3>
+<ol type="1">
+<li>给定非空集合<span class="math inline">\(V\)</span>，数域<span
+class="math inline">\(P\)</span></li>
+<li>在<span
+class="math inline">\(V\)</span>中定义了一种运算，称为加法，记为<span
+class="math inline">\(\alpha + \beta\)</span></li>
+<li>在<span class="math inline">\(V\)</span>与<span
+class="math inline">\(P\)</span>之间定义了另一种运算，称为数乘，记为<span
+class="math inline">\(k \alpha\)</span></li>
+<li>如果这两种运算关于<span
+class="math inline">\(V\)</span>封闭，并且满足以下8条运算规律，则称<span
+class="math inline">\(V\)</span>是<span
+class="math inline">\(P\)</span>上的一个线性空间</li>
 </ol>
+<figure>
+<img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207174656.png"
+alt="image.png" />
+<figcaption aria-hidden="true">image.png</figcaption>
+</figure>
 <blockquote>
-<p>[!attention]<br>注：非空集合$V$内元素的分量是$P$</p>
+<p>[!attention] 注：非空集合<span
+class="math inline">\(V\)</span>内元素的分量是<span
+class="math inline">\(P\)</span></p>
 </blockquote>
 <ul>
 <li>线性空间的三个重要例子：</li>
 </ul>
-<ol>
-<li>分量属于数域$P$的全体n元数组$(x_1, x_2, \cdot , x_n)$<br><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207215346.png"></li>
-<li>在实数域上，次数等于n的全体多项式<br><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207220418.png" alt="image.png"></li>
-<li>在实数域上，$m\times n$矩阵全体$R^{m\times n}$<br><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207220516.png" alt="image.png"></li>
+<ol type="1">
+<li>分量属于数域<span class="math inline">\(P\)</span>的全体n元数组<span
+class="math inline">\((x_1, x_2, \cdot , x_n)\)</span> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207215346.png" /></li>
+<li>在实数域上，次数等于n的全体多项式 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207220418.png"
+alt="image.png" /></li>
+<li>在实数域上，<span class="math inline">\(m\times
+n\)</span>矩阵全体<span class="math inline">\(R^{m\times n}\)</span>
+<img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207220516.png"
+alt="image.png" /></li>
 </ol>
-<h3 id="线性空间的性质"><a href="#线性空间的性质" class="headerlink" title="线性空间的性质"></a>线性空间的性质</h3><ol>
+<h3 id="线性空间的性质">线性空间的性质</h3>
+<ol type="1">
 <li>线性空间的零元素是唯一的</li>
 <li>线性空间中的任一元素的负元素是唯一的</li>
-<li>$0\alpha &#x3D;0, (-1) \alpha &#x3D; -\alpha, k0&#x3D;0$</li>
-<li>如果$k\alpha &#x3D;0$，则$k&#x3D;0$或$\alpha &#x3D;0$</li>
+<li><span class="math inline">\(0\alpha =0, (-1) \alpha = -\alpha,
+k0=0\)</span></li>
+<li>如果<span class="math inline">\(k\alpha =0\)</span>，则<span
+class="math inline">\(k=0\)</span>或<span class="math inline">\(\alpha
+=0\)</span></li>
 </ol>
-<h3 id="线性空间中向量的线性相关性"><a href="#线性空间中向量的线性相关性" class="headerlink" title="线性空间中向量的线性相关性"></a>线性空间中向量的线性相关性</h3><ul>
-<li><p>线性组合与线性表示：<br>  <img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207222001.png" alt="image.png"></p>
-</li>
-<li><p>向量组之间的等价关系：<br><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207222125.png" alt="image.png"></p>
-</li>
-<li><p>线性相关和线性无关：<br><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207222632.png" alt="image.png"></p>
-</li>
+<h3 id="线性空间中向量的线性相关性">线性空间中向量的线性相关性</h3>
+<ul>
+<li><p>线性组合与线性表示： <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207222001.png"
+alt="image.png" /></p></li>
+<li><p>向量组之间的等价关系： <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207222125.png"
+alt="image.png" /></p></li>
+<li><p>线性相关和线性无关： <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207222632.png"
+alt="image.png" /></p></li>
 </ul>
-<h2 id="线性空间的基与维数"><a href="#线性空间的基与维数" class="headerlink" title="线性空间的基与维数"></a>线性空间的基与维数</h2><h3 id="基、维数及坐标的定义"><a href="#基、维数及坐标的定义" class="headerlink" title="基、维数及坐标的定义"></a>基、维数及坐标的定义</h3><p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207223025.png" alt="image.png"></p>
-<h3 id="向量线性运算的坐标表示"><a href="#向量线性运算的坐标表示" class="headerlink" title="向量线性运算的坐标表示"></a>向量线性运算的坐标表示</h3><p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208145509.png" alt="image.png"><br><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208145533.png" alt="image.png"></p>
+<h2 id="线性空间的基与维数">线性空间的基与维数</h2>
+<h3 id="基维数及坐标的定义">基、维数及坐标的定义</h3>
+<figure>
+<img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207223025.png"
+alt="image.png" />
+<figcaption aria-hidden="true">image.png</figcaption>
+</figure>
+<h3 id="向量线性运算的坐标表示">向量线性运算的坐标表示</h3>
+<p><img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208145509.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208145533.png"
+alt="image.png" /></p>
 <ul>
 <li>两向量<strong>相加</strong>就是对应坐标向量分量相加</li>
 <li>向量<strong>数乘</strong>就是每个分量乘以数</li>
 </ul>
-<h3 id="基变换与坐标变换"><a href="#基变换与坐标变换" class="headerlink" title="基变换与坐标变换"></a>基变换与坐标变换</h3><ul>
-<li>基变换、过度矩阵概念<br><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208145957.png" alt="image.png"><br><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208150012.png" alt="image.png"></li>
+<h3 id="基变换与坐标变换">基变换与坐标变换</h3>
+<ul>
+<li>基变换、过度矩阵概念 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208145957.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208150012.png"
+alt="image.png" /></li>
 </ul>
 <blockquote>
-<p>[!attention]<br>过渡矩阵放在<strong>基向量后面</strong></p>
+<p>[!attention] 过渡矩阵放在<strong>基向量后面</strong></p>
 </blockquote>
 <ul>
-<li>坐标变换公式<br><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208151400.png" alt="image.png"><br><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208151410.png" alt="image.png"><br><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208151421.png" alt="image.png"></li>
+<li>坐标变换公式 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208151400.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208151410.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208151421.png"
+alt="image.png" /></li>
 </ul>
 <blockquote>
-<p>[!summary]</p>
+<p>[!summary] - 基向量<span class="math inline">\(\beta = \alpha
+A\)</span>，A为从向量<span class="math inline">\(\alpha\)</span> -&gt;
+<span class="math inline">\(\beta\)</span>的过渡矩阵 -
+对于该线性空间上一向量<span class="math inline">\(\gamma=\alpha(x_1,
+x_2,\dots, x_n)^T=\beta(y_1, y_2, \dots,
+y_n)^T\)</span>，其坐标变换为<span
+class="math inline">\(x^T=Ay^T\)</span></p>
+</blockquote>
+<h3 id="过渡矩阵的性质">过渡矩阵的性质</h3>
 <ul>
-<li>基向量$\beta &#x3D; \alpha A$，A为从向量$\alpha$ -&gt; $\beta$的过渡矩阵</li>
-<li>对于该线性空间上一向量$\gamma&#x3D;\alpha(x_1, x_2,\dots, x_n)^T&#x3D;\beta(y_1, y_2, \dots, y_n)^T$，其坐标变换为$x^T&#x3D;Ay^T$</li>
+<li><p>过渡矩阵的传递 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208162045.png"
+alt="image.png" /></p></li>
+<li><p>过渡矩阵是可逆矩阵 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208162252.png"
+alt="image.png" /></p></li>
+<li><p>若从<span class="math inline">\(\alpha\)</span>到<span
+class="math inline">\(\beta\)</span>的过渡矩阵为<span
+class="math inline">\(A\)</span>，则从<span
+class="math inline">\(\beta\)</span>到<span
+class="math inline">\(\alpha\)</span>的过渡矩阵为<span
+class="math inline">\(A^{-1}\)</span> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208162502.png"
+alt="image.png" /></p></li>
+<li><p>其它一些性质 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208162618.png"
+alt="image.png" /></p></li>
 </ul>
-</blockquote>
-<h3 id="过渡矩阵的性质"><a href="#过渡矩阵的性质" class="headerlink" title="过渡矩阵的性质"></a>过渡矩阵的性质</h3><ul>
-<li><p>过渡矩阵的传递<br><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208162045.png" alt="image.png"></p>
-</li>
-<li><p>过渡矩阵是可逆矩阵<br><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208162252.png" alt="image.png"></p>
-</li>
-<li><p>若从$\alpha$到$\beta$的过渡矩阵为$A$，则从$\beta$到$\alpha$的过渡矩阵为$A^{-1}$<br><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208162502.png" alt="image.png"></p>
-</li>
-<li><p>其它一些性质<br><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208162618.png" alt="image.png"></p>
-</li>
-</ul>
-<h2 id="线性子空间"><a href="#线性子空间" class="headerlink" title="线性子空间"></a>线性子空间</h2><h3 id="线性子空间的概念"><a href="#线性子空间的概念" class="headerlink" title="线性子空间的概念"></a>线性子空间的概念</h3><p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208232005.png" alt="image.png"></p>
+<h2 id="线性子空间">线性子空间</h2>
+<h3 id="线性子空间的概念">线性子空间的概念</h3>
+<figure>
+<img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208232005.png"
+alt="image.png" />
+<figcaption aria-hidden="true">image.png</figcaption>
+</figure>
 <blockquote>
-<p>[!summary]</p>
-<ol>
-<li>$W$是线性空间$V$的一个非空子集合</li>
-<li>$W$对于$V$中的线性运算封闭</li>
-</ol>
+<p>[!summary] 1. <span class="math inline">\(W\)</span>是线性空间<span
+class="math inline">\(V\)</span>的一个非空子集合 2. <span
+class="math inline">\(W\)</span>对于<span
+class="math inline">\(V\)</span>中的线性运算封闭</p>
 </blockquote>
-<p>一些特殊的子空间</p>
-<ul>
-<li>平凡子空间<br><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208232638.png" alt="image.png"></li>
-<li><strong>生成子空间</strong><br><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208232654.png" alt="image.png"></li>
-</ul>
-<h3 id="子空间的交与和"><a href="#子空间的交与和" class="headerlink" title="子空间的交与和"></a>子空间的交与和</h3><p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208233149.png" alt="image.png"></p>
+<p>一些特殊的子空间 - 平凡子空间 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208232638.png"
+alt="image.png" /> - <strong>生成子空间</strong> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208232654.png"
+alt="image.png" /></p>
+<h3 id="子空间的交与和">子空间的交与和</h3>
+<figure>
+<img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208233149.png"
+alt="image.png" />
+<figcaption aria-hidden="true">image.png</figcaption>
+</figure>
 <blockquote>
-<p>[!example]<br><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208234141.png" alt="image.png"><br><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208234221.png" alt="image.png"><br>这道例题结合了之前的生成子空间和子空间的交与和的概念</p>
+<p>[!example] <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208234141.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208234221.png"
+alt="image.png" />
+这道例题结合了之前的生成子空间和子空间的交与和的概念</p>
 </blockquote>
-<h3 id="子空间的基和维数"><a href="#子空间的基和维数" class="headerlink" title="子空间的基和维数"></a>子空间的基和维数</h3><p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208235951.png" alt="image.png"><br><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209000001.png" alt="image.png"><br><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209000019.png" alt="image.png"><br><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209000028.png" alt="image.png"><br><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209000045.png" alt="image.png"></p>
+<h3 id="子空间的基和维数">子空间的基和维数</h3>
+<p><img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208235951.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209000001.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209000019.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209000028.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209000045.png"
+alt="image.png" /></p>
 
       
     </div>
@@ -357,9 +448,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="安装WSLg"><a href="#安装WSLg" class="headerlink" title="安装WSLg"></a>安装WSLg</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 更新所有的源</span></span><br><span class="line">sudo apt update</span><br><span class="line"></span><br><span class="line"><span class="comment">## Gedit</span></span><br><span class="line">sudo apt install gedit -y</span><br></pre></td></tr></table></figure>
-
-<p>在vscode中可以运行matplotlib：<br><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/Pasted%2520image%252020221121213950.png"></p>
+          <h1 id="安装wslg">安装WSLg</h1>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 更新所有的源</span></span><br><span class="line">sudo apt update</span><br><span class="line"></span><br><span class="line"><span class="comment">## Gedit</span></span><br><span class="line">sudo apt install gedit -y</span><br></pre></td></tr></table></figure>
+<p>在vscode中可以运行matplotlib： <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/Pasted%2520image%252020221121213950.png" /></p>
 
       
     </div>
@@ -427,34 +519,38 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Linux下环境配置"><a href="#Linux下环境配置" class="headerlink" title="Linux下环境配置"></a>Linux下环境配置</h1><h2 id="Miniconda安装"><a href="#Miniconda安装" class="headerlink" title="Miniconda安装"></a>Miniconda安装</h2><p>这个非常简单，直接去官网下载shell脚本，然后安装即可，记得使用conda init初始化bash，这样每次登录shell就会自动进入conda环境…</p>
-<h3 id="源配置"><a href="#源配置" class="headerlink" title="源配置"></a>源配置</h3><p>选取北京外国语大学的源（清华源有的时候会卡，不过北外的源也是清华维护，不知道是什么原因）：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">channels:</span><br><span class="line">  - defaults</span><br><span class="line">show_channel_urls: true</span><br><span class="line">default_channels:</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/main</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/r</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/msys2</span><br><span class="line">custom_channels:</span><br><span class="line">  conda-forge: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  msys2: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  bioconda: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  menpo: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  pytorch: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  pytorch-lts: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  simpleitk: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br></pre></td></tr></table></figure>
-
-<h2 id="Pytorch安装"><a href="#Pytorch安装" class="headerlink" title="Pytorch安装"></a>Pytorch安装</h2><p>如果想要获取炼丹环境，使用anaconda安装cudnn&#x2F;cuda是个很好的选择！<br>然而现在的nvidia&#x2F;linux-64的官方anaconda源在国内的速度为0，为了切换为国内源，需要额外添加一个源：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvidia: https://mirrors.sustech.edu.cn/anaconda-extra/cloud</span><br></pre></td></tr></table></figure>
-
-<p>我的.condarc是这样的：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">channels:</span><br><span class="line">  - defaults</span><br><span class="line">show_channel_urls: true</span><br><span class="line">default_channels:</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/main</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/r</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/msys2</span><br><span class="line">custom_channels:</span><br><span class="line">  nvidia: https://mirrors.sustech.edu.cn/anaconda-extra/cloud</span><br><span class="line">  conda-forge: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  msys2: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  bioconda: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  menpo: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  pytorch: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  pytorch-lts: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  simpleitk: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li><p>创建新的anaconda环境：</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n &quot;pytorch&quot; python=3.8</span><br></pre></td></tr></table></figure>
-<p> 创建新的环境有利于我们更加合理的管理包之间的依赖，防止包之间的环境污染</p>
-</li>
-<li><p>进入pytorch官网：<a target="_blank" rel="noopener" href="https://pytorch.org/">PyTorch</a><br><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/Pasted%2520image%252020221112201609.png"><br> 选择合适的版本，并复制命令行，例如在我的电脑上安装的命令为：</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia</span><br></pre></td></tr></table></figure></li>
+          <h1 id="linux下环境配置">Linux下环境配置</h1>
+<h2 id="miniconda安装">Miniconda安装</h2>
+<p>这个非常简单，直接去官网下载shell脚本，然后安装即可，记得使用conda
+init初始化bash，这样每次登录shell就会自动进入conda环境...</p>
+<h3 id="源配置">源配置</h3>
+<p>选取北京外国语大学的源（清华源有的时候会卡，不过北外的源也是清华维护，不知道是什么原因）：
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">channels:</span><br><span class="line">  - defaults</span><br><span class="line">show_channel_urls: true</span><br><span class="line">default_channels:</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/main</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/r</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/msys2</span><br><span class="line">custom_channels:</span><br><span class="line">  conda-forge: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  msys2: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  bioconda: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  menpo: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  pytorch: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  pytorch-lts: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  simpleitk: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br></pre></td></tr></table></figure></p>
+<h2 id="pytorch安装">Pytorch安装</h2>
+<p>如果想要获取炼丹环境，使用anaconda安装cudnn/cuda是个很好的选择！
+然而现在的nvidia/linux-64的官方anaconda源在国内的速度为0，为了切换为国内源，需要额外添加一个源：
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvidia: https://mirrors.sustech.edu.cn/anaconda-extra/cloud</span><br></pre></td></tr></table></figure></p>
+<p>我的.condarc是这样的： <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">channels:</span><br><span class="line">  - defaults</span><br><span class="line">show_channel_urls: true</span><br><span class="line">default_channels:</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/main</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/r</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/msys2</span><br><span class="line">custom_channels:</span><br><span class="line">  nvidia: https://mirrors.sustech.edu.cn/anaconda-extra/cloud</span><br><span class="line">  conda-forge: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  msys2: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  bioconda: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  menpo: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  pytorch: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  pytorch-lts: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  simpleitk: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br></pre></td></tr></table></figure></p>
+<ol type="1">
+<li><p>创建新的anaconda环境： <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n &quot;pytorch&quot; python=3.8</span><br></pre></td></tr></table></figure>
+创建新的环境有利于我们更加合理的管理包之间的依赖，防止包之间的环境污染</p></li>
+<li><p>进入pytorch官网：<a target="_blank" rel="noopener" href="https://pytorch.org/">PyTorch</a> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/Pasted%2520image%252020221112201609.png" />
+选择合适的版本，并复制命令行，例如在我的电脑上安装的命令为：
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia</span><br></pre></td></tr></table></figure></p></li>
 </ol>
-<h2 id="Java安装"><a href="#Java安装" class="headerlink" title="Java安装"></a>Java安装</h2><ol>
-<li><p>下载JDK，推荐地址<a target="_blank" rel="noopener" href="https://mirrors.huaweicloud.com/java/jdk/">Index of java-local&#x2F;jdk (huaweicloud.com)</a></p>
-</li>
-<li><p>配置环境变量<br> 根据使用的shell进行配置，例如：使用bash就用<code>vim ~/.bashrc</code>配置，使用zsh就使用<code>vim ~/.zshrc</code>配置<br> 配置的变量如下：</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_202</span><br><span class="line">export JRE_HOME=$&#123;JAVA_HOME&#125;/jre</span><br><span class="line">export CLASSPATH=.:$&#123;JAVA_HOME&#125;/lib:$&#123;JRE_HOME&#125;/lib</span><br><span class="line">export PATH=$&#123;JAVA_HOME&#125;/bin:$PATH</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>重新打开终端或者执行<code>source ~/.zshrc</code>进行刷新</p>
-</li>
-<li><p>执行<code>java -version</code>，如果出现如下的语句说明配置成功<br><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/Pasted%2520image%252020221130205223.png"></p>
-</li>
+<h2 id="java安装">Java安装</h2>
+<ol type="1">
+<li><p>下载JDK，推荐地址<a
+target="_blank" rel="noopener" href="https://mirrors.huaweicloud.com/java/jdk/">Index of java-local/jdk
+(huaweicloud.com)</a></p></li>
+<li><p>配置环境变量
+根据使用的shell进行配置，例如：使用bash就用<code>vim ~/.bashrc</code>配置，使用zsh就使用<code>vim ~/.zshrc</code>配置
+配置的变量如下： <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_202</span><br><span class="line">export JRE_HOME=$&#123;JAVA_HOME&#125;/jre</span><br><span class="line">export CLASSPATH=.:$&#123;JAVA_HOME&#125;/lib:$&#123;JRE_HOME&#125;/lib</span><br><span class="line">export PATH=$&#123;JAVA_HOME&#125;/bin:$PATH</span><br></pre></td></tr></table></figure></p></li>
+<li><p>重新打开终端或者执行<code>source ~/.zshrc</code>进行刷新</p></li>
+<li><p>执行<code>java -version</code>，如果出现如下的语句说明配置成功
+<img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/Pasted%2520image%252020221130205223.png" /></p></li>
 </ol>
 
       
@@ -523,17 +619,24 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="好特征比好模型重要"><a href="#好特征比好模型重要" class="headerlink" title="好特征比好模型重要"></a>好特征比好模型重要</h1><p>在比赛中，有两个维度来看待特征和数据的关系：</p>
-<ol>
-<li>训练集和测试集的特征是否相同？<br> 对于那些特征分布不同的特征，我们需要加以修改，比如给定一个bool值，设置区间进行判断，或者直接drop分布不同的特征（因为添加他们可能在训练集上效果好，但是在测试集上是欠拟合的）</li>
-<li>训练集中是否有异常的特征数据？<br> 异常的特征数据会扰乱我们的模型，因此我们需要将它们完全剔除</li>
-</ol>
-<h1 id="几个模型比一个模型好"><a href="#几个模型比一个模型好" class="headerlink" title="几个模型比一个模型好"></a>几个模型比一个模型好</h1><p>如果一个模型的泛化性能很差，可以考虑不同的几个模型，放在一起设置权重预测，就像这样（请忽略这段代码的冗余，关注它们放在一起预测的思想）：<br><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230204205744.png" alt="image.png"></p>
-<h1 id="线下baseline很重要"><a href="#线下baseline很重要" class="headerlink" title="线下baseline很重要"></a>线下baseline很重要</h1><ol>
+          <h1 id="好特征比好模型重要">好特征比好模型重要</h1>
+<p>在比赛中，有两个维度来看待特征和数据的关系： 1.
+训练集和测试集的特征是否相同？
+对于那些特征分布不同的特征，我们需要加以修改，比如给定一个bool值，设置区间进行判断，或者直接drop分布不同的特征（因为添加他们可能在训练集上效果好，但是在测试集上是欠拟合的）
+2. 训练集中是否有异常的特征数据？
+异常的特征数据会扰乱我们的模型，因此我们需要将它们完全剔除</p>
+<h1 id="几个模型比一个模型好">几个模型比一个模型好</h1>
+<p>如果一个模型的泛化性能很差，可以考虑不同的几个模型，放在一起设置权重预测，就像这样（请忽略这段代码的冗余，关注它们放在一起预测的思想）：
+<img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230204205744.png"
+alt="image.png" /></p>
+<h1 id="线下baseline很重要">线下baseline很重要</h1>
+<ol type="1">
 <li>如果可以交叉验证，那就使用交叉验证</li>
 <li>如果模型过拟合，要及时停止，或者调整参数</li>
 </ol>
-<h1 id="多打比赛，挺有意思"><a href="#多打比赛，挺有意思" class="headerlink" title="多打比赛，挺有意思"></a>多打比赛，挺有意思</h1><p>第一次参加，有很多不足的地方，以后可以多参加，能学到不少东西！</p>
+<h1 id="多打比赛挺有意思">多打比赛，挺有意思</h1>
+<p>第一次参加，有很多不足的地方，以后可以多参加，能学到不少东西！</p>
 
       
     </div>
@@ -778,6 +881,63 @@ window.addEventListener('pjax:success', () => {
 
     <div id="pjax">
   
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 

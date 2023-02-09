@@ -30,7 +30,7 @@
 <meta property="og:description" content="Chapter 1 线性空间与内积空间 线性空间 数域的定义 简单来说就是P对四则运算封闭，则称\(P\)为一个数域  线性空间的概念  给定非空集合\(V\)，数域\(P\) 在\(V\)中定义了一种运算，称为加法，记为\(\alpha + \beta\) 在\(V\)与\(P\)之间定义了另一种运算，称为数乘，记为\(k \alpha\) 如果这两种运算关于\(V\)封闭，并">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-02-08T16:44:40.000Z">
-<meta property="article:modified_time" content="2023-02-08T16:44:59.708Z">
+<meta property="article:modified_time" content="2023-02-09T14:34:16.347Z">
 <meta property="article:author" content="Odd">
 <meta name="twitter:card" content="summary">
 
@@ -183,16 +183,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2023-02-09 00:44:40 / Modified: 00:44:59" itemprop="dateCreated datePublished" datetime="2023-02-09T00:44:40+08:00">2023-02-09</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Math/" itemprop="url" rel="index"><span itemprop="name">Math</span></a>
-                </span>
+              <time title="Created: 2023-02-09 00:44:40 / Modified: 22:34:16" itemprop="dateCreated datePublished" datetime="2023-02-09T00:44:40+08:00">2023-02-09</time>
             </span>
 
           
@@ -383,13 +374,150 @@ alt="image.png" />
 src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208235951.png"
 alt="image.png" /> <img
 src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209000001.png"
-alt="image.png" /> <img
+alt="image.png" /></p>
+<blockquote>
+<p>[!summary] <span class="math inline">\(dim (V_1+V_2) = dim V_1 + dim
+V_2 - dim(V_1 \cap V_2)\)</span></p>
+</blockquote>
+<p><img
 src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209000019.png"
 alt="image.png" /> <img
 src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209000028.png"
 alt="image.png" /> <img
 src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209000045.png"
 alt="image.png" /></p>
+<blockquote>
+<p>[!summary] 1. <strong>直和</strong>指的是空间中<span
+class="math inline">\(V_1 \cap V_2 = \{0\}\)</span> 2.
+直和的两个向量相互称为补空间 3. 可以进行直和的空间叫做直和分解</p>
+</blockquote>
+<h2 id="内积空间">内积空间</h2>
+<h3 id="内积的定义与性质">内积的定义与性质</h3>
+<figure>
+<img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209202211.png"
+alt="image.png" />
+<figcaption aria-hidden="true">image.png</figcaption>
+</figure>
+<blockquote>
+<p>[!example] 在欧氏空间中，内积为<span class="math inline">\(a\cdot b =
+|a||b|\cos\alpha\)</span>
+但是在内积空间中，扩展了内积这一概念，内积变成了一种满足条件的任一方式</p>
+</blockquote>
+<h4 id="内积的性质">内积的性质</h4>
+<figure>
+<img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209202721.png"
+alt="image.png" />
+<figcaption aria-hidden="true">image.png</figcaption>
+</figure>
+<h4 id="度量矩阵">度量矩阵</h4>
+<p><img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209202920.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209202928.png"
+alt="image.png" /></p>
+<blockquote>
+<p>[!notice] 正定： -
+广义定义：设M是n阶方阵，如果对任何非零向量z，都有_z__T__Mz_&gt;
+0，其中_z_<em>T</em> 表示z的转置，就称M为正定矩阵。 正定的等价命题： 1.
+正定矩阵的行列式恒为正； 2. 实对称矩阵A正定当且仅当A与单位矩阵合同； 3.
+若A是正定矩阵，则A的逆矩阵也是正定矩阵； 4. 两个正定矩阵的和是正定矩阵；
+5. 正实数与正定矩阵的乘积是正定矩阵；</p>
+</blockquote>
+<ul>
+<li><p>模的定义 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209202935.png"
+alt="image.png" /></p></li>
+<li><p>向量的单位化 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209204547.png"
+alt="image.png" /></p></li>
+<li><p>模的一些性质 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209204729.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209205018.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209211115.png"
+alt="image.png" /></p></li>
+</ul>
+<h3
+id="向量的正交性与schmidt正交化方法">向量的正交性与Schmidt正交化方法</h3>
+<h4 id="正交性">正交性</h4>
+<ul>
+<li><p>正交的定义 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209211236.png"
+alt="image.png" /></p></li>
+<li><p>正交系的定义 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209211539.png"
+alt="image.png" /></p></li>
+<li><p>正交系的一些性质 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209211608.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209212111.png"
+alt="image.png" /></p></li>
+</ul>
+<h4 id="schmit正交化方法">Schmit正交化方法</h4>
+<p><img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209212139.png"
+alt="image.png" /> &gt; [!attention] &gt; 标准正交基不唯一！ &gt;
+例如在<span class="math inline">\(R^3\)</span>中，<span
+class="math inline">\((1, 0, 0), (0, 1, 0), (0, 0,
+1)\)</span>也是一组正交基</p>
+<h4 id="正交基在坐标的应用">正交基在坐标的应用</h4>
+<figure>
+<img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209214505.png"
+alt="image.png" />
+<figcaption aria-hidden="true">image.png</figcaption>
+</figure>
+<p><img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209214546.png"
+alt="image.png" /> &gt; [!notice] &gt; 正交矩阵：如果<span
+class="math inline">\(AA^T=E\)</span>（<span
+class="math inline">\(E\)</span>为单位矩阵，<span
+class="math inline">\(A^T\)</span>表示“矩阵<span
+class="math inline">\(A\)</span>的转置矩阵”）或<span
+class="math inline">\(A^TA=E\)</span>，则<span
+class="math inline">\(n\)</span>阶实矩阵<span
+class="math inline">\(A\)</span>称为正交矩阵</p>
+<h3 id="空间的正交分解">空间的正交分解</h3>
+<p><img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209215307.png"
+alt="image.png" /> &gt; [!example] &gt; <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209215938.png"
+alt="image.png" /> &gt; 这道题有几个难点： &gt; 1. 按照题目所示，<span
+class="math inline">\(\alpha_1\)</span>, <span
+class="math inline">\(\alpha_2\)</span>是线性无关的，因此可以把<span
+class="math inline">\(\alpha_1\)</span>和<span
+class="math inline">\(\alpha_2\)</span>当作一组基； &gt; 2.
+然后需要通过<span
+class="math inline">\(R^4\)</span>的标准正交基和正交补空间的性质来构造条件
+&gt; 3. 最后得到正交补空间的基，从而求得正交补空间<span
+class="math inline">\(W^{\bot}\)</span></p>
+<h3 id="线性空间的同构">线性空间的同构</h3>
+<p><img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209221305.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209222209.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209222220.png"
+alt="image.png" /></p>
+<ul>
+<li>同构映射的性质 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209222548.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209222556.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209222603.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209222632.png"
+alt="image.png" /></li>
+</ul>
+<p><img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209222724.png"
+alt="image.png" /> &gt; [!note] &gt; 一个好记的“说法”： &gt;
+对于任意两个维数相同的空间，都可以通过数域<span
+class="math inline">\(P\)</span>上的一组坐标做1-1的映射，那么根据映射的<strong>”传递性“</strong>，这两个空间一定可以建立一个1-1映射</p>
 
     </div>
 
@@ -467,7 +595,7 @@ alt="image.png" /></p>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#chapter-1-%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E4%B8%8E%E5%86%85%E7%A7%AF%E7%A9%BA%E9%97%B4"><span class="nav-number">1.</span> <span class="nav-text">Chapter 1 线性空间与内积空间</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4"><span class="nav-number">1.1.</span> <span class="nav-text">线性空间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E5%9F%9F%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.1.</span> <span class="nav-text">数域的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.2.</span> <span class="nav-text">线性空间的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-number">1.1.3.</span> <span class="nav-text">线性空间的性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E4%B8%AD%E5%90%91%E9%87%8F%E7%9A%84%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E6%80%A7"><span class="nav-number">1.1.4.</span> <span class="nav-text">线性空间中向量的线性相关性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E5%9F%BA%E4%B8%8E%E7%BB%B4%E6%95%B0"><span class="nav-number">1.2.</span> <span class="nav-text">线性空间的基与维数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E7%BB%B4%E6%95%B0%E5%8F%8A%E5%9D%90%E6%A0%87%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">1.2.1.</span> <span class="nav-text">基、维数及坐标的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%91%E9%87%8F%E7%BA%BF%E6%80%A7%E8%BF%90%E7%AE%97%E7%9A%84%E5%9D%90%E6%A0%87%E8%A1%A8%E7%A4%BA"><span class="nav-number">1.2.2.</span> <span class="nav-text">向量线性运算的坐标表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E5%8F%98%E6%8D%A2%E4%B8%8E%E5%9D%90%E6%A0%87%E5%8F%98%E6%8D%A2"><span class="nav-number">1.2.3.</span> <span class="nav-text">基变换与坐标变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%87%E6%B8%A1%E7%9F%A9%E9%98%B5%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-number">1.2.4.</span> <span class="nav-text">过渡矩阵的性质</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E5%AD%90%E7%A9%BA%E9%97%B4"><span class="nav-number">1.3.</span> <span class="nav-text">线性子空间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E5%AD%90%E7%A9%BA%E9%97%B4%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">1.3.1.</span> <span class="nav-text">线性子空间的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%90%E7%A9%BA%E9%97%B4%E7%9A%84%E4%BA%A4%E4%B8%8E%E5%92%8C"><span class="nav-number">1.3.2.</span> <span class="nav-text">子空间的交与和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%90%E7%A9%BA%E9%97%B4%E7%9A%84%E5%9F%BA%E5%92%8C%E7%BB%B4%E6%95%B0"><span class="nav-number">1.3.3.</span> <span class="nav-text">子空间的基和维数</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#chapter-1-%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E4%B8%8E%E5%86%85%E7%A7%AF%E7%A9%BA%E9%97%B4"><span class="nav-number">1.</span> <span class="nav-text">Chapter 1 线性空间与内积空间</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4"><span class="nav-number">1.1.</span> <span class="nav-text">线性空间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E5%9F%9F%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.1.</span> <span class="nav-text">数域的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.2.</span> <span class="nav-text">线性空间的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-number">1.1.3.</span> <span class="nav-text">线性空间的性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E4%B8%AD%E5%90%91%E9%87%8F%E7%9A%84%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E6%80%A7"><span class="nav-number">1.1.4.</span> <span class="nav-text">线性空间中向量的线性相关性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E5%9F%BA%E4%B8%8E%E7%BB%B4%E6%95%B0"><span class="nav-number">1.2.</span> <span class="nav-text">线性空间的基与维数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E7%BB%B4%E6%95%B0%E5%8F%8A%E5%9D%90%E6%A0%87%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">1.2.1.</span> <span class="nav-text">基、维数及坐标的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%91%E9%87%8F%E7%BA%BF%E6%80%A7%E8%BF%90%E7%AE%97%E7%9A%84%E5%9D%90%E6%A0%87%E8%A1%A8%E7%A4%BA"><span class="nav-number">1.2.2.</span> <span class="nav-text">向量线性运算的坐标表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E5%8F%98%E6%8D%A2%E4%B8%8E%E5%9D%90%E6%A0%87%E5%8F%98%E6%8D%A2"><span class="nav-number">1.2.3.</span> <span class="nav-text">基变换与坐标变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%87%E6%B8%A1%E7%9F%A9%E9%98%B5%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-number">1.2.4.</span> <span class="nav-text">过渡矩阵的性质</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E5%AD%90%E7%A9%BA%E9%97%B4"><span class="nav-number">1.3.</span> <span class="nav-text">线性子空间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E5%AD%90%E7%A9%BA%E9%97%B4%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">1.3.1.</span> <span class="nav-text">线性子空间的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%90%E7%A9%BA%E9%97%B4%E7%9A%84%E4%BA%A4%E4%B8%8E%E5%92%8C"><span class="nav-number">1.3.2.</span> <span class="nav-text">子空间的交与和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%90%E7%A9%BA%E9%97%B4%E7%9A%84%E5%9F%BA%E5%92%8C%E7%BB%B4%E6%95%B0"><span class="nav-number">1.3.3.</span> <span class="nav-text">子空间的基和维数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E7%A7%AF%E7%A9%BA%E9%97%B4"><span class="nav-number">1.4.</span> <span class="nav-text">内积空间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%85%E7%A7%AF%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E6%80%A7%E8%B4%A8"><span class="nav-number">1.4.1.</span> <span class="nav-text">内积的定义与性质</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%85%E7%A7%AF%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">内积的性质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BA%A6%E9%87%8F%E7%9F%A9%E9%98%B5"><span class="nav-number">1.4.1.2.</span> <span class="nav-text">度量矩阵</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%91%E9%87%8F%E7%9A%84%E6%AD%A3%E4%BA%A4%E6%80%A7%E4%B8%8Eschmidt%E6%AD%A3%E4%BA%A4%E5%8C%96%E6%96%B9%E6%B3%95"><span class="nav-number">1.4.2.</span> <span class="nav-text">向量的正交性与Schmidt正交化方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AD%A3%E4%BA%A4%E6%80%A7"><span class="nav-number">1.4.2.1.</span> <span class="nav-text">正交性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#schmit%E6%AD%A3%E4%BA%A4%E5%8C%96%E6%96%B9%E6%B3%95"><span class="nav-number">1.4.2.2.</span> <span class="nav-text">Schmit正交化方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AD%A3%E4%BA%A4%E5%9F%BA%E5%9C%A8%E5%9D%90%E6%A0%87%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-number">1.4.2.3.</span> <span class="nav-text">正交基在坐标的应用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4%E7%9A%84%E6%AD%A3%E4%BA%A4%E5%88%86%E8%A7%A3"><span class="nav-number">1.4.3.</span> <span class="nav-text">空间的正交分解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E5%90%8C%E6%9E%84"><span class="nav-number">1.4.4.</span> <span class="nav-text">线性空间的同构</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -488,7 +616,7 @@ alt="image.png" /></p>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
   </nav>

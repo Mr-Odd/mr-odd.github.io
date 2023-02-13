@@ -177,10 +177,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2023-02-09 00:44:40 / Modified: 22:34:16" itemprop="dateCreated datePublished" datetime="2023-02-09T00:44:40+08:00">2023-02-09</time>
+              <time title="Created: 2023-02-09 00:44:40" itemprop="dateCreated datePublished" datetime="2023-02-09T00:44:40+08:00">2023-02-09</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-02-13 21:31:44" itemprop="dateModified" datetime="2023-02-13T21:31:44+08:00">2023-02-13</time>
+              </span>
 
           
 
@@ -514,6 +520,290 @@ src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/2023020922
 alt="image.png" /> &gt; [!note] &gt; 一个好记的“说法”： &gt;
 对于任意两个维数相同的空间，都可以通过数域<span
 class="math inline">\(P\)</span>上的一组坐标做1-1的映射，那么根据映射的<strong>”传递性“</strong>，这两个空间一定可以建立一个1-1映射</p>
+<h1 id="chapter-2-线性变换">Chapter 2 线性变换</h1>
+<p>我们把包含<strong>加法</strong>和<strong>数乘</strong>操作的线性空间到线性空间的映射叫做<strong>线性映射</strong>，而<strong>线性变换</strong>就是线性空间到自身的<strong>线性映射</strong></p>
+<h2 id="线性变换的概念">线性变换的概念</h2>
+<h3 id="线性变换的定义">线性变换的定义</h3>
+<p><img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210160536.png"
+alt="image.png" /> &gt; [!summary] &gt; 根据上一章节的内容，<span
+class="math inline">\(V\)</span>到<span
+class="math inline">\(V\)</span>的映射满足维数相同的条件，所以是一个<strong>同构映射</strong>，且满足线性运算<strong>加法</strong>和<strong>数乘</strong>，因此变换<span
+class="math inline">\(T\)</span>被称为<strong>线性变换</strong></p>
+<ul>
+<li>一些特殊的线性变换 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210170423.png"
+alt="image.png" /></li>
+</ul>
+<h3 id="线性变换的性质">线性变换的性质</h3>
+<p><img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210170449.png"
+alt="image.png" /> - 值域和核 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210171447.png"
+alt="image.png" /> &gt; [!note] &gt; 集合<span
+class="math inline">\(A\)</span>到<span
+class="math inline">\(B\)</span>的映射，<span
+class="math inline">\(A\)</span>中的元素<span
+class="math inline">\(a\)</span>与<span
+class="math inline">\(B\)</span>中的元素<span
+class="math inline">\(b\)</span>对应，<span
+class="math inline">\(a\)</span>叫<strong>原像</strong>，<span
+class="math inline">\(b\)</span>叫<strong>像</strong></p>
+<ul>
+<li>值域和核的一些性质 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210172717.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210172918.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210173637.png"
+alt="image.png" /> &gt; [!note] &gt;
+直观来理解，一个线性映射有可能把一个维度的原像映射成零向量，从而达到降维的效果</li>
+</ul>
+<h2 id="线性变换的运算">线性变换的运算</h2>
+<p><img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210174213.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210180347.png"
+alt="image.png" /> &gt; [!attention] &gt;
+勘误：关于第(4)个运算规律里有一行是错的： <span
+class="math inline">\(T+0=T\)</span></p>
+<p><img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210182455.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210182545.png"
+alt="image.png" /></p>
+<h2 id="线性变换的矩阵">线性变换的矩阵</h2>
+<h3 id="线性变换的矩阵表示">线性变换的矩阵表示</h3>
+<p><img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210195500.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210195821.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210195906.png"
+alt="image.png" /> &gt; [!attention] &gt;
+这里需要注意，不要和矩阵的基变换、坐标变换搞混； &gt; - 基变换是从<span
+class="math inline">\((\alpha_1, \alpha_2,\dots,
+\alpha_n)\)</span>到<span class="math inline">\((\beta_1, \beta_2,
+\dots, \beta_n)\)</span>，向量<span
+class="math inline">\(\alpha\)</span>在基<span
+class="math inline">\((\alpha_1, \alpha_2,\dots,
+\alpha_n)\)</span>的坐标是<span class="math inline">\(x\)</span>，<span
+class="math inline">\(\beta\)</span>在基<span
+class="math inline">\((\beta_1, \beta_2, \dots,
+\beta_n)\)</span>的坐标是<span
+class="math inline">\(y\)</span>，最后得到的坐标变换是<span
+class="math inline">\(x=Ay\)</span> &gt; - 线性变换是从像向量<span
+class="math inline">\(\alpha\)</span>到原像向量<span
+class="math inline">\(T(\alpha)\)</span>，<span
+class="math inline">\(\alpha\)</span>在<span
+class="math inline">\((\alpha_1, \alpha_2,\dots,
+\alpha_n)\)</span>的坐标是<span class="math inline">\(x\)</span>，<span
+class="math inline">\(T(\alpha)\)</span>在<span
+class="math inline">\((\alpha_1, \alpha_2,\dots,
+\alpha_n)\)</span>的坐标是<span
+class="math inline">\(y\)</span>，最后得到的坐标变换是<span
+class="math inline">\(y=Ax\)</span></p>
+<p><img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210203932.png"
+alt="image.png" /> &gt; [!attention] &gt; 这里注意不要和前者搞混 &gt;
+该定理说明，线性空间V中的线性变换T在两个不同基下的矩阵是<strong>相似</strong>的．反过来也可以证明，两个<strong>相似矩阵</strong>总可以看成某一线性变换在两个<strong>不同基</strong>下的矩阵．</p>
+<blockquote>
+<p>[!note] - 什么是合同？<span
+class="math inline">\(P^{-1}AP=B,\)</span> 则称<span
+class="math inline">\(A\)</span>相似<span
+class="math inline">\(B\)</span> -
+矩阵相似：判断特征值是否相等；判断行列式是否相等；判断迹是否相等；判断秩是否相等。
+- 什么是相似？ <span class="math inline">\(X^TAX=B\)</span>，则称<span
+class="math inline">\(A\)</span>，<span
+class="math inline">\(B\)</span>合同 - 矩阵合同：设<span
+class="math inline">\(A,B\)</span>均为复数域上的n阶对称矩阵,则<span
+class="math inline">\(A\)</span>与<span
+class="math inline">\(B\)</span>在复数域上合同等价于<span
+class="math inline">\(A\)</span>与<span
+class="math inline">\(B\)</span>的秩相同；设<span
+class="math inline">\(A,B\)</span>均为实数域上的<span
+class="math inline">\(n\)</span>阶对称矩阵,则<span
+class="math inline">\(A\)</span>与<span
+class="math inline">\(B\)</span>在实数域上合同等价于<span
+class="math inline">\(A\)</span>与<span
+class="math inline">\(B\)</span>有相同的正、负惯性指数（即正、负特征值的个数相等）。</p>
+</blockquote>
+<blockquote>
+<p>[!example] <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211145527.png"
+alt="image.png" /> - 第一问已知坐标变换，求线性变换<span
+class="math inline">\(T\)</span>在基下的矩阵 - 首先要求得坐标的变换公式
+- 然后要求得线性变换<span class="math inline">\(T\)</span>下的矩阵 -
+最后根据坐标和线性变换的关系求得矩阵 - 第二问已知变换矩阵<span
+class="math inline">\(B\)</span>，要求得变换矩阵<span
+class="math inline">\(A\)</span> - 首先需要找到两个基的过渡矩阵 -
+然后根据过渡矩阵和线性变换的关系求得<span
+class="math inline">\(A\)</span></p>
+</blockquote>
+<h2 id="正交变换与酉变换">正交变换与酉变换</h2>
+<p>在内积空间中有一种特殊的线性变换，它保持向量的内
+积不变，这种变换称为酉（正交）变换</p>
+<h3 id="正交矩阵与正交变换">正交矩阵与正交变换</h3>
+<p><img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211154557.png"
+alt="image.png" /> - 正交矩阵的充要条件 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211162120.png"
+alt="image.png" /></p>
+<ul>
+<li>一些线性变换的性质 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211162659.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211162817.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211162830.png"
+alt="image.png" /> ### 酉矩阵与酉变换</li>
+</ul>
+<p><img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211164007.png"
+alt="image.png" /> &gt; [!note] &gt; 设<span class="math inline">\(A\in
+C^{m\times n}\)</span> ，用<span
+class="math inline">\(\overline{A}\)</span>表示以A的元素的共轭复数为元素组成的矩阵，其中<span
+class="math inline">\(C^{m\times n}\)</span>表示元素属于复数域<span
+class="math inline">\(C\)</span>的全体<span
+class="math inline">\(m\times
+n\)</span>矩阵组成的集合，按矩阵的加法和数与矩阵的数量乘法构成复数域<span
+class="math inline">\(C\)</span>上的线性空间； 则有：<span
+class="math inline">\(A^H=(\overline{A})^T\)</span>，其中<span
+class="math inline">\((\overline{A})^T\)</span>表示对<span
+class="math inline">\(\overline{A}\)</span>取转置<span
+class="math inline">\(A^H\)</span>称为<span
+class="math inline">\(A\)</span>的共轭转置矩阵 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211170208.png"
+alt="image.png" /></p>
+<blockquote>
+<p>[!note] 和实数上的正交矩阵基本相同</p>
+</blockquote>
+<h2 id="正规矩阵">正规矩阵</h2>
+<p><img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211170347.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211170401.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211171145.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211171423.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211171451.png"
+alt="image.png" /> # Chapter 3 矩阵的Jordan标准形</p>
+<p>本章主要讨论<span
+class="math inline">\(\lambda\)</span>-矩阵的概念与基本性质，及其Smith标准形，然后利用<span
+class="math inline">\(\lambda\)</span>-矩阵的理论导出矩阵的Jordan标准形，最后给出矩阵的Cayley-Hamiltom定理</p>
+<h2 id="lambda-矩阵及其smith标准形"><span
+class="math inline">\(\lambda\)</span>-矩阵及其Smith标准形</h2>
+<p><img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213161604.png"
+alt="image.png" /> - 多项式表示法 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213165627.png"
+alt="image.png" /></p>
+<p><span
+class="math inline">\(\lambda\)</span>-矩阵和普通矩阵有很多概念是一样的：
+- 秩的概念 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213170654.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213171545.png"
+alt="image.png" /></p>
+<ul>
+<li>逆矩阵的概念 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213170821.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213170957.png"
+alt="image.png" /></li>
+</ul>
+<blockquote>
+<p>[!attention] 注意，在<span class="math inline">\(n\)</span>阶<span
+class="math inline">\(\lambda\)</span>-矩阵中，可逆必满秩，反之则不然（因为可逆条件比较苛刻，需要保证行列式为非零常数，而满秩只要非零即可）</p>
+</blockquote>
+<h3 id="lambda-矩阵的初等变换与等价"><span
+class="math inline">\(\lambda\)</span>-矩阵的初等变换与等价</h3>
+<ul>
+<li><p>初等变换 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213172557.png"
+alt="image.png" /></p></li>
+<li><p>初等矩阵 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213172647.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213172733.png"
+alt="image.png" /></p></li>
+<li><p>初等矩阵的性质 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213172801.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213173020.png"
+alt="image.png" /></p></li>
+<li><p><span class="math inline">\(\lambda\)</span>-矩阵等价 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213173051.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213173826.png"
+alt="image.png" /></p></li>
+</ul>
+<blockquote>
+<p>[!attention] -
+-矩阵的等价关系与一般等价关系一样，满足自反性，对称性和传递性 -
+注意，若<span class="math inline">\(B(\lambda) \cong
+A(\lambda)\)</span>，则有<span class="math inline">\(\vert B(\lambda) =
+c\vert A(\lambda) \vert\)</span></p>
+</blockquote>
+<p><img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213182625.png"
+alt="image.png" /> &gt; [!attention] &gt;
+3.1.4的逆命题不成立，即秩相等，但不一定等价</p>
+<h2 id="lambda-矩阵的smith标准形"><span
+class="math inline">\(\lambda\)</span>-矩阵的Smith标准形</h2>
+<figure>
+<img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213201904.png"
+alt="image.png" />
+<figcaption aria-hidden="true">image.png</figcaption>
+</figure>
+<blockquote>
+<p>[!note] 如何化<span
+class="math inline">\(\lambda\)</span>矩阵为标准形？ - case 1: <span
+class="math inline">\(a_{11}\)</span>能整除一切
+在这种情况下用第一行及第一列消去其他元素 - case 2: <span
+class="math inline">\(a_{11}\)</span>不能整除一切<span
+class="math inline">\(a_{ij}\)</span>，可以利用初等变换降低<span
+class="math inline">\(a_{11}\)</span>次数，具体分为三种情况： 1.
+第一行存在元素不能被<span class="math inline">\(a_{11}\)</span>整除：
+互换列 2. 第一列存在元素不能被<span
+class="math inline">\(a_{11}\)</span>整除： 互换行 3. <span
+class="math inline">\(a_{ii}\)</span>不能被<span
+class="math inline">\(a_{11}\)</span>整除：
+通过消除元素，变成上面两种情况</p>
+</blockquote>
+<ul>
+<li><p>不变因子 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213203640.png"
+alt="image.png" /></p></li>
+<li><p>初等因子 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213203807.png"
+alt="image.png" /> &gt; [!note] &gt; 一共有<span
+class="math inline">\(rankA(\lambda)=r\)</span>，因此每一列有<span
+class="math inline">\(r\)</span>个</p></li>
+<li><p>一些关于不变因子和初等因子的性质 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213205100.png"
+alt="image.png" /></p></li>
+</ul>
+<blockquote>
+<p>[!example] 关于如何找到不变因子的例题： <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213211148.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213211203.png"
+alt="image.png" /></p>
+</blockquote>
+<h3 id="lambda-矩阵的行列式因子"><span
+class="math inline">\(\lambda\)</span>-矩阵的行列式因子</h3>
+<p>？？？ 这里没太懂 <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213211539.png"
+alt="image.png" /> <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213211848.png"
+alt="image.png" /> &gt; [!example] &gt; 利用行列式因子求解不变因子的方法
+&gt; <img
+src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213212646.png"
+alt="image.png" /></p>
 
       
     </div>

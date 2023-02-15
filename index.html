@@ -208,611 +208,490 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="chapter-1-线性空间与内积空间">Chapter 1 线性空间与内积空间</h1>
-<h2 id="线性空间">线性空间</h2>
-<h3 id="数域的定义">数域的定义</h3>
-<p>简单来说就是P对<strong>四则运算封闭</strong>，则称<span
-class="math inline">\(P\)</span>为一个数域 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207173316.png"
-alt="image.png" /></p>
-<h3 id="线性空间的概念">线性空间的概念</h3>
-<ol type="1">
-<li>给定非空集合<span class="math inline">\(V\)</span>，数域<span
-class="math inline">\(P\)</span></li>
-<li>在<span
-class="math inline">\(V\)</span>中定义了一种运算，称为加法，记为<span
-class="math inline">\(\alpha + \beta\)</span></li>
-<li>在<span class="math inline">\(V\)</span>与<span
-class="math inline">\(P\)</span>之间定义了另一种运算，称为数乘，记为<span
-class="math inline">\(k \alpha\)</span></li>
-<li>如果这两种运算关于<span
-class="math inline">\(V\)</span>封闭，并且满足以下8条运算规律，则称<span
-class="math inline">\(V\)</span>是<span
-class="math inline">\(P\)</span>上的一个线性空间</li>
+          <h1 id="chapter-1-线性空间与内积空间"><a class="markdownIt-Anchor" href="#chapter-1-线性空间与内积空间"></a> Chapter 1 线性空间与内积空间</h1>
+<h2 id="线性空间"><a class="markdownIt-Anchor" href="#线性空间"></a> 线性空间</h2>
+<h3 id="数域的定义"><a class="markdownIt-Anchor" href="#数域的定义"></a> 数域的定义</h3>
+<p>简单来说就是P对<strong>四则运算封闭</strong>，则称<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span>为一个数域<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207173316.png" alt="image.png" /></p>
+<h3 id="线性空间的概念"><a class="markdownIt-Anchor" href="#线性空间的概念"></a> 线性空间的概念</h3>
+<ol>
+<li>给定非空集合<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span>，数域<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span></li>
+<li>在<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span>中定义了一种运算，称为加法，记为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>+</mo><mi>β</mi></mrow><annotation encoding="application/x-tex">\alpha + \beta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.05278em;">β</span></span></span></span></li>
+<li>在<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span>与<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span>之间定义了另一种运算，称为数乘，记为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mi>α</mi></mrow><annotation encoding="application/x-tex">k \alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span></li>
+<li>如果这两种运算关于<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span>封闭，并且满足以下8条运算规律，则称<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span>是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span>上的一个线性空间</li>
 </ol>
-<figure>
-<img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207174656.png"
-alt="image.png" />
-<figcaption aria-hidden="true">image.png</figcaption>
-</figure>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207174656.png" alt="image.png" /></p>
 <blockquote>
-<p>[!attention] 注：非空集合<span
-class="math inline">\(V\)</span>内元素的分量是<span
-class="math inline">\(P\)</span></p>
+<p>[!attention]<br />
+注：非空集合<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span>内元素的分量是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span></p>
 </blockquote>
 <ul>
 <li>线性空间的三个重要例子：</li>
 </ul>
-<ol type="1">
-<li>分量属于数域<span class="math inline">\(P\)</span>的全体n元数组<span
-class="math inline">\((x_1, x_2, \cdot , x_n)\)</span> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207215346.png" /></li>
-<li>在实数域上，次数等于n的全体多项式 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207220418.png"
-alt="image.png" /></li>
-<li>在实数域上，<span class="math inline">\(m\times
-n\)</span>矩阵全体<span class="math inline">\(R^{m\times n}\)</span>
-<img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207220516.png"
-alt="image.png" /></li>
+<ol>
+<li>分量属于数域<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span>的全体n元数组<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>x</mi><mn>2</mn></msub><mo separator="true">,</mo><mo>⋅</mo><mo separator="true">,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(x_1, x_2, \cdot , x_n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">⋅</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207215346.png" alt="" /></li>
+<li>在实数域上，次数等于n的全体多项式<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207220418.png" alt="image.png" /></li>
+<li>在实数域上，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m\times n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span>矩阵全体<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>R</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">R^{m\times n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.771331em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.771331em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">m</span><span class="mbin mtight">×</span><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207220516.png" alt="image.png" /></li>
 </ol>
-<h3 id="线性空间的性质">线性空间的性质</h3>
-<ol type="1">
+<h3 id="线性空间的性质"><a class="markdownIt-Anchor" href="#线性空间的性质"></a> 线性空间的性质</h3>
+<ol>
 <li>线性空间的零元素是唯一的</li>
 <li>线性空间中的任一元素的负元素是唯一的</li>
-<li><span class="math inline">\(0\alpha =0, (-1) \alpha = -\alpha,
-k0=0\)</span></li>
-<li>如果<span class="math inline">\(k\alpha =0\)</span>，则<span
-class="math inline">\(k=0\)</span>或<span class="math inline">\(\alpha
-=0\)</span></li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mi>α</mi><mo>=</mo><mn>0</mn><mo separator="true">,</mo><mo stretchy="false">(</mo><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mi>α</mi><mo>=</mo><mo>−</mo><mi>α</mi><mo separator="true">,</mo><mi>k</mi><mn>0</mn><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">0\alpha =0, (-1) \alpha = -\alpha, k0=0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mopen">(</span><span class="mord">−</span><span class="mord">1</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord">−</span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">0</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span></li>
+<li>如果<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mi>α</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">k\alpha =0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>，则<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">k=0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>或<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\alpha =0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span></li>
 </ol>
-<h3 id="线性空间中向量的线性相关性">线性空间中向量的线性相关性</h3>
+<h3 id="线性空间中向量的线性相关性"><a class="markdownIt-Anchor" href="#线性空间中向量的线性相关性"></a> 线性空间中向量的线性相关性</h3>
 <ul>
-<li><p>线性组合与线性表示： <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207222001.png"
-alt="image.png" /></p></li>
-<li><p>向量组之间的等价关系： <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207222125.png"
-alt="image.png" /></p></li>
-<li><p>线性相关和线性无关： <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207222632.png"
-alt="image.png" /></p></li>
+<li>
+<p>线性组合与线性表示：<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207222001.png" alt="image.png" /></p>
+</li>
+<li>
+<p>向量组之间的等价关系：<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207222125.png" alt="image.png" /></p>
+</li>
+<li>
+<p>线性相关和线性无关：<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207222632.png" alt="image.png" /></p>
+</li>
 </ul>
-<h2 id="线性空间的基与维数">线性空间的基与维数</h2>
-<h3 id="基维数及坐标的定义">基、维数及坐标的定义</h3>
-<figure>
-<img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207223025.png"
-alt="image.png" />
-<figcaption aria-hidden="true">image.png</figcaption>
-</figure>
-<h3 id="向量线性运算的坐标表示">向量线性运算的坐标表示</h3>
-<p><img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208145509.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208145533.png"
-alt="image.png" /></p>
+<h2 id="线性空间的基与维数"><a class="markdownIt-Anchor" href="#线性空间的基与维数"></a> 线性空间的基与维数</h2>
+<h3 id="基-维数及坐标的定义"><a class="markdownIt-Anchor" href="#基-维数及坐标的定义"></a> 基、维数及坐标的定义</h3>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230207223025.png" alt="image.png" /></p>
+<h3 id="向量线性运算的坐标表示"><a class="markdownIt-Anchor" href="#向量线性运算的坐标表示"></a> 向量线性运算的坐标表示</h3>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208145509.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208145533.png" alt="image.png" /></p>
 <ul>
 <li>两向量<strong>相加</strong>就是对应坐标向量分量相加</li>
 <li>向量<strong>数乘</strong>就是每个分量乘以数</li>
 </ul>
-<h3 id="基变换与坐标变换">基变换与坐标变换</h3>
+<h3 id="基变换与坐标变换"><a class="markdownIt-Anchor" href="#基变换与坐标变换"></a> 基变换与坐标变换</h3>
 <ul>
-<li>基变换、过度矩阵概念 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208145957.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208150012.png"
-alt="image.png" /></li>
+<li>基变换、过度矩阵概念<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208145957.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208150012.png" alt="image.png" /></li>
 </ul>
 <blockquote>
-<p>[!attention] 过渡矩阵放在<strong>基向量后面</strong></p>
+<p>[!attention]<br />
+过渡矩阵放在<strong>基向量后面</strong></p>
 </blockquote>
 <ul>
-<li>坐标变换公式 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208151400.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208151410.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208151421.png"
-alt="image.png" /></li>
+<li>坐标变换公式<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208151400.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208151410.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208151421.png" alt="image.png" /></li>
 </ul>
 <blockquote>
-<p>[!summary] - 基向量<span class="math inline">\(\beta = \alpha
-A\)</span>，A为从向量<span class="math inline">\(\alpha\)</span> -&gt;
-<span class="math inline">\(\beta\)</span>的过渡矩阵 -
-对于该线性空间上一向量<span class="math inline">\(\gamma=\alpha(x_1,
-x_2,\dots, x_n)^T=\beta(y_1, y_2, \dots,
-y_n)^T\)</span>，其坐标变换为<span
-class="math inline">\(x^T=Ay^T\)</span></p>
-</blockquote>
-<h3 id="过渡矩阵的性质">过渡矩阵的性质</h3>
+<p>[!summary]</p>
 <ul>
-<li><p>过渡矩阵的传递 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208162045.png"
-alt="image.png" /></p></li>
-<li><p>过渡矩阵是可逆矩阵 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208162252.png"
-alt="image.png" /></p></li>
-<li><p>若从<span class="math inline">\(\alpha\)</span>到<span
-class="math inline">\(\beta\)</span>的过渡矩阵为<span
-class="math inline">\(A\)</span>，则从<span
-class="math inline">\(\beta\)</span>到<span
-class="math inline">\(\alpha\)</span>的过渡矩阵为<span
-class="math inline">\(A^{-1}\)</span> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208162502.png"
-alt="image.png" /></p></li>
-<li><p>其它一些性质 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208162618.png"
-alt="image.png" /></p></li>
+<li>基向量<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi><mo>=</mo><mi>α</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">\beta = \alpha A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mord mathnormal">A</span></span></span></span>，A为从向量<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span> -&gt; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi></mrow><annotation encoding="application/x-tex">\beta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.05278em;">β</span></span></span></span>的过渡矩阵</li>
+<li>对于该线性空间上一向量<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi><mo>=</mo><mi>α</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>x</mi><mn>2</mn></msub><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><msub><mi>x</mi><mi>n</mi></msub><msup><mo stretchy="false">)</mo><mi>T</mi></msup><mo>=</mo><mi>β</mi><mo stretchy="false">(</mo><msub><mi>y</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>y</mi><mn>2</mn></msub><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><msub><mi>y</mi><mi>n</mi></msub><msup><mo stretchy="false">)</mo><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">\gamma=\alpha(x_1, x_2,\dots, x_n)^T=\beta(y_1, y_2, \dots, y_n)^T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.05556em;">γ</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.0913309999999998em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.0913309999999998em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span></span></span></span>，其坐标变换为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mi>T</mi></msup><mo>=</mo><mi>A</mi><msup><mi>y</mi><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">x^T=Ay^T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.035771em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">A</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span></span></span></span></li>
 </ul>
-<h2 id="线性子空间">线性子空间</h2>
-<h3 id="线性子空间的概念">线性子空间的概念</h3>
-<figure>
-<img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208232005.png"
-alt="image.png" />
-<figcaption aria-hidden="true">image.png</figcaption>
-</figure>
-<blockquote>
-<p>[!summary] 1. <span class="math inline">\(W\)</span>是线性空间<span
-class="math inline">\(V\)</span>的一个非空子集合 2. <span
-class="math inline">\(W\)</span>对于<span
-class="math inline">\(V\)</span>中的线性运算封闭</p>
 </blockquote>
-<p>一些特殊的子空间 - 平凡子空间 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208232638.png"
-alt="image.png" /> - <strong>生成子空间</strong> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208232654.png"
-alt="image.png" /></p>
-<h3 id="子空间的交与和">子空间的交与和</h3>
-<figure>
-<img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208233149.png"
-alt="image.png" />
-<figcaption aria-hidden="true">image.png</figcaption>
-</figure>
+<h3 id="过渡矩阵的性质"><a class="markdownIt-Anchor" href="#过渡矩阵的性质"></a> 过渡矩阵的性质</h3>
+<ul>
+<li>
+<p>过渡矩阵的传递<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208162045.png" alt="image.png" /></p>
+</li>
+<li>
+<p>过渡矩阵是可逆矩阵<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208162252.png" alt="image.png" /></p>
+</li>
+<li>
+<p>若从<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span>到<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi></mrow><annotation encoding="application/x-tex">\beta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.05278em;">β</span></span></span></span>的过渡矩阵为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span></span></span></span>，则从<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi></mrow><annotation encoding="application/x-tex">\beta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.05278em;">β</span></span></span></span>到<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span>的过渡矩阵为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">A^{-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208162502.png" alt="image.png" /></p>
+</li>
+<li>
+<p>其它一些性质<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208162618.png" alt="image.png" /></p>
+</li>
+</ul>
+<h2 id="线性子空间"><a class="markdownIt-Anchor" href="#线性子空间"></a> 线性子空间</h2>
+<h3 id="线性子空间的概念"><a class="markdownIt-Anchor" href="#线性子空间的概念"></a> 线性子空间的概念</h3>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208232005.png" alt="image.png" /></p>
 <blockquote>
-<p>[!example] <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208234141.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208234221.png"
-alt="image.png" />
+<p>[!summary]</p>
+<ol>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi></mrow><annotation encoding="application/x-tex">W</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span></span></span></span>是线性空间<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span>的一个非空子集合</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi></mrow><annotation encoding="application/x-tex">W</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span></span></span></span>对于<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span>中的线性运算封闭</li>
+</ol>
+</blockquote>
+<p>一些特殊的子空间</p>
+<ul>
+<li>平凡子空间<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208232638.png" alt="image.png" /></li>
+<li><strong>生成子空间</strong><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208232654.png" alt="image.png" /></li>
+</ul>
+<h3 id="子空间的交与和"><a class="markdownIt-Anchor" href="#子空间的交与和"></a> 子空间的交与和</h3>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208233149.png" alt="image.png" /></p>
+<blockquote>
+<p>[!example]<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208234141.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208234221.png" alt="image.png" /><br />
 这道例题结合了之前的生成子空间和子空间的交与和的概念</p>
 </blockquote>
-<h3 id="子空间的基和维数">子空间的基和维数</h3>
-<p><img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208235951.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209000001.png"
-alt="image.png" /></p>
+<h3 id="子空间的基和维数"><a class="markdownIt-Anchor" href="#子空间的基和维数"></a> 子空间的基和维数</h3>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230208235951.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209000001.png" alt="image.png" /></p>
 <blockquote>
-<p>[!summary] <span class="math inline">\(dim (V_1+V_2) = dim V_1 + dim
-V_2 - dim(V_1 \cap V_2)\)</span></p>
+<p>[!summary]<br />
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>i</mi><mi>m</mi><mo stretchy="false">(</mo><msub><mi>V</mi><mn>1</mn></msub><mo>+</mo><msub><mi>V</mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo>=</mo><mi>d</mi><mi>i</mi><mi>m</mi><msub><mi>V</mi><mn>1</mn></msub><mo>+</mo><mi>d</mi><mi>i</mi><mi>m</mi><msub><mi>V</mi><mn>2</mn></msub><mo>−</mo><mi>d</mi><mi>i</mi><mi>m</mi><mo stretchy="false">(</mo><msub><mi>V</mi><mn>1</mn></msub><mo>∩</mo><msub><mi>V</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">dim (V_1+V_2) = dim V_1 + dim V_2 - dim(V_1 \cap V_2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">i</span><span class="mord mathnormal">m</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">i</span><span class="mord mathnormal">m</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">i</span><span class="mord mathnormal">m</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">i</span><span class="mord mathnormal">m</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∩</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></p>
 </blockquote>
-<p><img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209000019.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209000028.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209000045.png"
-alt="image.png" /></p>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209000019.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209000028.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209000045.png" alt="image.png" /></p>
 <blockquote>
-<p>[!summary] 1. <strong>直和</strong>指的是空间中<span
-class="math inline">\(V_1 \cap V_2 = \{0\}\)</span> 2.
-直和的两个向量相互称为补空间 3. 可以进行直和的空间叫做直和分解</p>
+<p>[!summary]</p>
+<ol>
+<li><strong>直和</strong>指的是空间中<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>∩</mo><msub><mi>V</mi><mn>2</mn></msub><mo>=</mo><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">V_1 \cap V_2 = \{0\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∩</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">0</span><span class="mclose">}</span></span></span></span></li>
+<li>直和的两个向量相互称为补空间</li>
+<li>可以进行直和的空间叫做直和分解</li>
+</ol>
 </blockquote>
-<h2 id="内积空间">内积空间</h2>
-<h3 id="内积的定义与性质">内积的定义与性质</h3>
-<figure>
-<img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209202211.png"
-alt="image.png" />
-<figcaption aria-hidden="true">image.png</figcaption>
-</figure>
+<h2 id="内积空间"><a class="markdownIt-Anchor" href="#内积空间"></a> 内积空间</h2>
+<h3 id="内积的定义与性质"><a class="markdownIt-Anchor" href="#内积的定义与性质"></a> 内积的定义与性质</h3>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209202211.png" alt="image.png" /></p>
 <blockquote>
-<p>[!example] 在欧氏空间中，内积为<span class="math inline">\(a\cdot b =
-|a||b|\cos\alpha\)</span>
+<p>[!example]<br />
+在欧氏空间中，内积为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>⋅</mo><mi>b</mi><mo>=</mo><mi mathvariant="normal">∣</mi><mi>a</mi><mi mathvariant="normal">∣</mi><mi mathvariant="normal">∣</mi><mi>b</mi><mi mathvariant="normal">∣</mi><mi>cos</mi><mo>⁡</mo><mi>α</mi></mrow><annotation encoding="application/x-tex">a\cdot b = |a||b|\cos\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.44445em;vertical-align:0em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal">a</span><span class="mord">∣</span><span class="mord">∣</span><span class="mord mathnormal">b</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">cos</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span><br />
 但是在内积空间中，扩展了内积这一概念，内积变成了一种满足条件的任一方式</p>
 </blockquote>
-<h4 id="内积的性质">内积的性质</h4>
-<figure>
-<img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209202721.png"
-alt="image.png" />
-<figcaption aria-hidden="true">image.png</figcaption>
-</figure>
-<h4 id="度量矩阵">度量矩阵</h4>
-<p><img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209202920.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209202928.png"
-alt="image.png" /></p>
+<h4 id="内积的性质"><a class="markdownIt-Anchor" href="#内积的性质"></a> 内积的性质</h4>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209202721.png" alt="image.png" /></p>
+<h4 id="度量矩阵"><a class="markdownIt-Anchor" href="#度量矩阵"></a> 度量矩阵</h4>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209202920.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209202928.png" alt="image.png" /></p>
 <blockquote>
-<p>[!notice] 正定： -
-广义定义：设M是n阶方阵，如果对任何非零向量z，都有_z__T__Mz_&gt;
-0，其中_z_<em>T</em> 表示z的转置，就称M为正定矩阵。 正定的等价命题： 1.
-正定矩阵的行列式恒为正； 2. 实对称矩阵A正定当且仅当A与单位矩阵合同； 3.
-若A是正定矩阵，则A的逆矩阵也是正定矩阵； 4. 两个正定矩阵的和是正定矩阵；
-5. 正实数与正定矩阵的乘积是正定矩阵；</p>
+<p>[!notice]<br />
+正定：</p>
+<ul>
+<li>广义定义：设M是n阶方阵，如果对任何非零向量z，都有_z__T__Mz_&gt; 0，其中_z__T_ 表示z的转置，就称M为正定矩阵。<br />
+正定的等价命题：</li>
+</ul>
+<ol>
+<li>正定矩阵的行列式恒为正；</li>
+<li>实对称矩阵A正定当且仅当A与单位矩阵合同；</li>
+<li>若A是正定矩阵，则A的逆矩阵也是正定矩阵；</li>
+<li>两个正定矩阵的和是正定矩阵；</li>
+<li>正实数与正定矩阵的乘积是正定矩阵；</li>
+</ol>
 </blockquote>
 <ul>
-<li><p>模的定义 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209202935.png"
-alt="image.png" /></p></li>
-<li><p>向量的单位化 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209204547.png"
-alt="image.png" /></p></li>
-<li><p>模的一些性质 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209204729.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209205018.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209211115.png"
-alt="image.png" /></p></li>
+<li>
+<p>模的定义<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209202935.png" alt="image.png" /></p>
+</li>
+<li>
+<p>向量的单位化<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209204547.png" alt="image.png" /></p>
+</li>
+<li>
+<p>模的一些性质<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209204729.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209205018.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209211115.png" alt="image.png" /></p>
+</li>
 </ul>
-<h3
-id="向量的正交性与schmidt正交化方法">向量的正交性与Schmidt正交化方法</h3>
-<h4 id="正交性">正交性</h4>
+<h3 id="向量的正交性与schmidt正交化方法"><a class="markdownIt-Anchor" href="#向量的正交性与schmidt正交化方法"></a> 向量的正交性与Schmidt正交化方法</h3>
+<h4 id="正交性"><a class="markdownIt-Anchor" href="#正交性"></a> 正交性</h4>
 <ul>
-<li><p>正交的定义 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209211236.png"
-alt="image.png" /></p></li>
-<li><p>正交系的定义 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209211539.png"
-alt="image.png" /></p></li>
-<li><p>正交系的一些性质 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209211608.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209212111.png"
-alt="image.png" /></p></li>
+<li>
+<p>正交的定义<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209211236.png" alt="image.png" /></p>
+</li>
+<li>
+<p>正交系的定义<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209211539.png" alt="image.png" /></p>
+</li>
+<li>
+<p>正交系的一些性质<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209211608.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209212111.png" alt="image.png" /></p>
+</li>
 </ul>
-<h4 id="schmit正交化方法">Schmit正交化方法</h4>
-<p><img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209212139.png"
-alt="image.png" /> &gt; [!attention] &gt; 标准正交基不唯一！ &gt;
-例如在<span class="math inline">\(R^3\)</span>中，<span
-class="math inline">\((1, 0, 0), (0, 1, 0), (0, 0,
-1)\)</span>也是一组正交基</p>
-<h4 id="正交基在坐标的应用">正交基在坐标的应用</h4>
-<figure>
-<img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209214505.png"
-alt="image.png" />
-<figcaption aria-hidden="true">image.png</figcaption>
-</figure>
-<p><img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209214546.png"
-alt="image.png" /> &gt; [!notice] &gt; 正交矩阵：如果<span
-class="math inline">\(AA^T=E\)</span>（<span
-class="math inline">\(E\)</span>为单位矩阵，<span
-class="math inline">\(A^T\)</span>表示“矩阵<span
-class="math inline">\(A\)</span>的转置矩阵”）或<span
-class="math inline">\(A^TA=E\)</span>，则<span
-class="math inline">\(n\)</span>阶实矩阵<span
-class="math inline">\(A\)</span>称为正交矩阵</p>
-<h3 id="空间的正交分解">空间的正交分解</h3>
-<p><img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209215307.png"
-alt="image.png" /> &gt; [!example] &gt; <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209215938.png"
-alt="image.png" /> &gt; 这道题有几个难点： &gt; 1. 按照题目所示，<span
-class="math inline">\(\alpha_1\)</span>, <span
-class="math inline">\(\alpha_2\)</span>是线性无关的，因此可以把<span
-class="math inline">\(\alpha_1\)</span>和<span
-class="math inline">\(\alpha_2\)</span>当作一组基； &gt; 2.
-然后需要通过<span
-class="math inline">\(R^4\)</span>的标准正交基和正交补空间的性质来构造条件
-&gt; 3. 最后得到正交补空间的基，从而求得正交补空间<span
-class="math inline">\(W^{\bot}\)</span></p>
-<h3 id="线性空间的同构">线性空间的同构</h3>
-<p><img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209221305.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209222209.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209222220.png"
-alt="image.png" /></p>
+<h4 id="schmit正交化方法"><a class="markdownIt-Anchor" href="#schmit正交化方法"></a> Schmit正交化方法</h4>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209212139.png" alt="image.png" /></p>
+<blockquote>
+<p>[!attention]<br />
+标准正交基不唯一！<br />
+例如在<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>R</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">R^3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span>中，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>1</mn><mo separator="true">,</mo><mn>0</mn><mo separator="true">,</mo><mn>0</mn><mo stretchy="false">)</mo><mo separator="true">,</mo><mo stretchy="false">(</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>0</mn><mo stretchy="false">)</mo><mo separator="true">,</mo><mo stretchy="false">(</mo><mn>0</mn><mo separator="true">,</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(1, 0, 0), (0, 1, 0), (0, 0, 1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">0</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mopen">(</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">0</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mopen">(</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span>也是一组正交基</p>
+</blockquote>
+<h4 id="正交基在坐标的应用"><a class="markdownIt-Anchor" href="#正交基在坐标的应用"></a> 正交基在坐标的应用</h4>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209214505.png" alt="image.png" /></p>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209214546.png" alt="image.png" /></p>
+<blockquote>
+<p>[!notice]<br />
+正交矩阵：如果<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msup><mi>A</mi><mi>T</mi></msup><mo>=</mo><mi>E</mi></mrow><annotation encoding="application/x-tex">AA^T=E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="mord mathnormal">A</span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span></span>（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi></mrow><annotation encoding="application/x-tex">E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span></span>为单位矩阵，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>A</mi><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">A^T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span></span></span></span>表示“矩阵<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span></span></span></span>的转置矩阵”）或<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>A</mi><mi>T</mi></msup><mi>A</mi><mo>=</mo><mi>E</mi></mrow><annotation encoding="application/x-tex">A^TA=E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span></span>，则<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span>阶实矩阵<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span></span></span></span>称为正交矩阵</p>
+</blockquote>
+<h3 id="空间的正交分解"><a class="markdownIt-Anchor" href="#空间的正交分解"></a> 空间的正交分解</h3>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209215307.png" alt="image.png" /></p>
+<blockquote>
+<p>[!example]<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209215938.png" alt="image.png" /><br />
+这道题有几个难点：</p>
+<ol>
+<li>按照题目所示，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>α</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">\alpha_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>α</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\alpha_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>是线性无关的，因此可以把<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>α</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">\alpha_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>和<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>α</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\alpha_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>当作一组基；</li>
+<li>然后需要通过<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>R</mi><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">R^4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span>的标准正交基和正交补空间的性质来构造条件</li>
+<li>最后得到正交补空间的基，从而求得正交补空间<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>W</mi><mi mathvariant="normal">⊥</mi></msup></mrow><annotation encoding="application/x-tex">W^{\bot}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.849108em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">⊥</span></span></span></span></span></span></span></span></span></span></span></span></li>
+</ol>
+</blockquote>
+<h3 id="线性空间的同构"><a class="markdownIt-Anchor" href="#线性空间的同构"></a> 线性空间的同构</h3>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209221305.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209222209.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209222220.png" alt="image.png" /></p>
 <ul>
-<li>同构映射的性质 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209222548.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209222556.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209222603.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209222632.png"
-alt="image.png" /></li>
+<li>同构映射的性质<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209222548.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209222556.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209222603.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209222632.png" alt="image.png" /></li>
 </ul>
-<p><img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209222724.png"
-alt="image.png" /> &gt; [!note] &gt; 一个好记的“说法”： &gt;
-对于任意两个维数相同的空间，都可以通过数域<span
-class="math inline">\(P\)</span>上的一组坐标做1-1的映射，那么根据映射的<strong>”传递性“</strong>，这两个空间一定可以建立一个1-1映射</p>
-<h1 id="chapter-2-线性变换">Chapter 2 线性变换</h1>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230209222724.png" alt="image.png" /></p>
+<blockquote>
+<p>[!note]<br />
+一个好记的“说法”：<br />
+对于任意两个维数相同的空间，都可以通过数域<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span>上的一组坐标做1-1的映射，那么根据映射的**”传递性“**，这两个空间一定可以建立一个1-1映射</p>
+</blockquote>
+<h1 id="chapter-2-线性变换"><a class="markdownIt-Anchor" href="#chapter-2-线性变换"></a> Chapter 2 线性变换</h1>
 <p>我们把包含<strong>加法</strong>和<strong>数乘</strong>操作的线性空间到线性空间的映射叫做<strong>线性映射</strong>，而<strong>线性变换</strong>就是线性空间到自身的<strong>线性映射</strong></p>
-<h2 id="线性变换的概念">线性变换的概念</h2>
-<h3 id="线性变换的定义">线性变换的定义</h3>
-<p><img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210160536.png"
-alt="image.png" /> &gt; [!summary] &gt; 根据上一章节的内容，<span
-class="math inline">\(V\)</span>到<span
-class="math inline">\(V\)</span>的映射满足维数相同的条件，所以是一个<strong>同构映射</strong>，且满足线性运算<strong>加法</strong>和<strong>数乘</strong>，因此变换<span
-class="math inline">\(T\)</span>被称为<strong>线性变换</strong></p>
+<h2 id="线性变换的概念"><a class="markdownIt-Anchor" href="#线性变换的概念"></a> 线性变换的概念</h2>
+<h3 id="线性变换的定义"><a class="markdownIt-Anchor" href="#线性变换的定义"></a> 线性变换的定义</h3>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210160536.png" alt="image.png" /></p>
+<blockquote>
+<p>[!summary]<br />
+根据上一章节的内容，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span>到<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span>的映射满足维数相同的条件，所以是一个<strong>同构映射</strong>，且满足线性运算<strong>加法</strong>和<strong>数乘</strong>，因此变换<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span>被称为<strong>线性变换</strong></p>
+</blockquote>
 <ul>
-<li>一些特殊的线性变换 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210170423.png"
-alt="image.png" /></li>
+<li>一些特殊的线性变换<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210170423.png" alt="image.png" /></li>
 </ul>
-<h3 id="线性变换的性质">线性变换的性质</h3>
-<p><img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210170449.png"
-alt="image.png" /> - 值域和核 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210171447.png"
-alt="image.png" /> &gt; [!note] &gt; 集合<span
-class="math inline">\(A\)</span>到<span
-class="math inline">\(B\)</span>的映射，<span
-class="math inline">\(A\)</span>中的元素<span
-class="math inline">\(a\)</span>与<span
-class="math inline">\(B\)</span>中的元素<span
-class="math inline">\(b\)</span>对应，<span
-class="math inline">\(a\)</span>叫<strong>原像</strong>，<span
-class="math inline">\(b\)</span>叫<strong>像</strong></p>
+<h3 id="线性变换的性质"><a class="markdownIt-Anchor" href="#线性变换的性质"></a> 线性变换的性质</h3>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210170449.png" alt="image.png" /></p>
 <ul>
-<li>值域和核的一些性质 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210172717.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210172918.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210173637.png"
-alt="image.png" /> &gt; [!note] &gt;
-直观来理解，一个线性映射有可能把一个维度的原像映射成零向量，从而达到降维的效果</li>
+<li>值域和核<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210171447.png" alt="image.png" /></li>
 </ul>
-<h2 id="线性变换的运算">线性变换的运算</h2>
-<p><img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210174213.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210180347.png"
-alt="image.png" /> &gt; [!attention] &gt;
-勘误：关于第(4)个运算规律里有一行是错的： <span
-class="math inline">\(T+0=T\)</span></p>
-<p><img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210182455.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210182545.png"
-alt="image.png" /></p>
-<h2 id="线性变换的矩阵">线性变换的矩阵</h2>
-<h3 id="线性变换的矩阵表示">线性变换的矩阵表示</h3>
-<p><img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210195500.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210195821.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210195906.png"
-alt="image.png" /> &gt; [!attention] &gt;
-这里需要注意，不要和矩阵的基变换、坐标变换搞混； &gt; - 基变换是从<span
-class="math inline">\((\alpha_1, \alpha_2,\dots,
-\alpha_n)\)</span>到<span class="math inline">\((\beta_1, \beta_2,
-\dots, \beta_n)\)</span>，向量<span
-class="math inline">\(\alpha\)</span>在基<span
-class="math inline">\((\alpha_1, \alpha_2,\dots,
-\alpha_n)\)</span>的坐标是<span class="math inline">\(x\)</span>，<span
-class="math inline">\(\beta\)</span>在基<span
-class="math inline">\((\beta_1, \beta_2, \dots,
-\beta_n)\)</span>的坐标是<span
-class="math inline">\(y\)</span>，最后得到的坐标变换是<span
-class="math inline">\(x=Ay\)</span> &gt; - 线性变换是从像向量<span
-class="math inline">\(\alpha\)</span>到原像向量<span
-class="math inline">\(T(\alpha)\)</span>，<span
-class="math inline">\(\alpha\)</span>在<span
-class="math inline">\((\alpha_1, \alpha_2,\dots,
-\alpha_n)\)</span>的坐标是<span class="math inline">\(x\)</span>，<span
-class="math inline">\(T(\alpha)\)</span>在<span
-class="math inline">\((\alpha_1, \alpha_2,\dots,
-\alpha_n)\)</span>的坐标是<span
-class="math inline">\(y\)</span>，最后得到的坐标变换是<span
-class="math inline">\(y=Ax\)</span></p>
-<p><img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210203932.png"
-alt="image.png" /> &gt; [!attention] &gt; 这里注意不要和前者搞混 &gt;
+<blockquote>
+<p>[!note]<br />
+集合<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span></span></span></span>到<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>的映射，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span></span></span></span>中的元素<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">a</span></span></span></span>与<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>中的元素<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">b</span></span></span></span>对应，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">a</span></span></span></span>叫<strong>原像</strong>，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">b</span></span></span></span>叫<strong>像</strong></p>
+</blockquote>
+<ul>
+<li>值域和核的一些性质<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210172717.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210172918.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210173637.png" alt="image.png" /></li>
+</ul>
+<blockquote>
+<p>[!note]<br />
+直观来理解，一个线性映射有可能把一个维度的原像映射成零向量，从而达到降维的效果</p>
+</blockquote>
+<h2 id="线性变换的运算"><a class="markdownIt-Anchor" href="#线性变换的运算"></a> 线性变换的运算</h2>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210174213.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210180347.png" alt="image.png" /></p>
+<blockquote>
+<p>[!attention]<br />
+勘误：关于第(4)个运算规律里有一行是错的： <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>+</mo><mn>0</mn><mo>=</mo><mi>T</mi></mrow><annotation encoding="application/x-tex">T+0=T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span></p>
+</blockquote>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210182455.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210182545.png" alt="image.png" /></p>
+<h2 id="线性变换的矩阵"><a class="markdownIt-Anchor" href="#线性变换的矩阵"></a> 线性变换的矩阵</h2>
+<h3 id="线性变换的矩阵表示"><a class="markdownIt-Anchor" href="#线性变换的矩阵表示"></a> 线性变换的矩阵表示</h3>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210195500.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210195821.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210195906.png" alt="image.png" /></p>
+<blockquote>
+<p>[!attention]<br />
+这里需要注意，不要和矩阵的基变换、坐标变换搞混；</p>
+<ul>
+<li>基变换是从<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><msub><mi>α</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>α</mi><mn>2</mn></msub><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><msub><mi>α</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(\alpha_1, \alpha_2,\dots, \alpha_n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>到<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><msub><mi>β</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>β</mi><mn>2</mn></msub><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><msub><mi>β</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(\beta_1, \beta_2, \dots, \beta_n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.05278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>，向量<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span>在基<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><msub><mi>α</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>α</mi><mn>2</mn></msub><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><msub><mi>α</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(\alpha_1, \alpha_2,\dots, \alpha_n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>的坐标是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi></mrow><annotation encoding="application/x-tex">\beta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.05278em;">β</span></span></span></span>在基<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><msub><mi>β</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>β</mi><mn>2</mn></msub><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><msub><mi>β</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(\beta_1, \beta_2, \dots, \beta_n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.05278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>的坐标是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span>，最后得到的坐标变换是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>A</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">x=Ay</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span></li>
+<li>线性变换是从像向量<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span>到原像向量<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">T(\alpha)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mclose">)</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span>在<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><msub><mi>α</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>α</mi><mn>2</mn></msub><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><msub><mi>α</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(\alpha_1, \alpha_2,\dots, \alpha_n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>的坐标是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">T(\alpha)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mclose">)</span></span></span></span>在<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><msub><mi>α</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>α</mi><mn>2</mn></msub><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><msub><mi>α</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(\alpha_1, \alpha_2,\dots, \alpha_n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>的坐标是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span>，最后得到的坐标变换是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>A</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">y=Ax</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal">x</span></span></span></span></li>
+</ul>
+</blockquote>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230210203932.png" alt="image.png" /></p>
+<blockquote>
+<p>[!attention]<br />
+这里注意不要和前者搞混<br />
 该定理说明，线性空间V中的线性变换T在两个不同基下的矩阵是<strong>相似</strong>的．反过来也可以证明，两个<strong>相似矩阵</strong>总可以看成某一线性变换在两个<strong>不同基</strong>下的矩阵．</p>
-<blockquote>
-<p>[!note] - 什么是合同？<span
-class="math inline">\(P^{-1}AP=B,\)</span> 则称<span
-class="math inline">\(A\)</span>相似<span
-class="math inline">\(B\)</span> -
-矩阵相似：判断特征值是否相等；判断行列式是否相等；判断迹是否相等；判断秩是否相等。
-- 什么是相似？ <span class="math inline">\(X^TAX=B\)</span>，则称<span
-class="math inline">\(A\)</span>，<span
-class="math inline">\(B\)</span>合同 - 矩阵合同：设<span
-class="math inline">\(A,B\)</span>均为复数域上的n阶对称矩阵,则<span
-class="math inline">\(A\)</span>与<span
-class="math inline">\(B\)</span>在复数域上合同等价于<span
-class="math inline">\(A\)</span>与<span
-class="math inline">\(B\)</span>的秩相同；设<span
-class="math inline">\(A,B\)</span>均为实数域上的<span
-class="math inline">\(n\)</span>阶对称矩阵,则<span
-class="math inline">\(A\)</span>与<span
-class="math inline">\(B\)</span>在实数域上合同等价于<span
-class="math inline">\(A\)</span>与<span
-class="math inline">\(B\)</span>有相同的正、负惯性指数（即正、负特征值的个数相等）。</p>
 </blockquote>
 <blockquote>
-<p>[!example] <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211145527.png"
-alt="image.png" /> - 第一问已知坐标变换，求线性变换<span
-class="math inline">\(T\)</span>在基下的矩阵 - 首先要求得坐标的变换公式
-- 然后要求得线性变换<span class="math inline">\(T\)</span>下的矩阵 -
-最后根据坐标和线性变换的关系求得矩阵 - 第二问已知变换矩阵<span
-class="math inline">\(B\)</span>，要求得变换矩阵<span
-class="math inline">\(A\)</span> - 首先需要找到两个基的过渡矩阵 -
-然后根据过渡矩阵和线性变换的关系求得<span
-class="math inline">\(A\)</span></p>
-</blockquote>
-<h2 id="正交变换与酉变换">正交变换与酉变换</h2>
-<p>在内积空间中有一种特殊的线性变换，它保持向量的内
-积不变，这种变换称为酉（正交）变换</p>
-<h3 id="正交矩阵与正交变换">正交矩阵与正交变换</h3>
-<p><img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211154557.png"
-alt="image.png" /> - 正交矩阵的充要条件 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211162120.png"
-alt="image.png" /></p>
+<p>[!note]</p>
 <ul>
-<li>一些线性变换的性质 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211162659.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211162817.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211162830.png"
-alt="image.png" /> ### 酉矩阵与酉变换</li>
+<li>什么是合同？<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>P</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>A</mi><mi>P</mi><mo>=</mo><mi>B</mi><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">P^{-1}AP=B,</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mpunct">,</span></span></span></span> 则称<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span></span></span></span>相似<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span></li>
+<li>矩阵相似：判断特征值是否相等；判断行列式是否相等；判断迹是否相等；判断秩是否相等。</li>
+<li>什么是相似？ <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>X</mi><mi>T</mi></msup><mi>A</mi><mi>X</mi><mo>=</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">X^TAX=B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>，则称<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>合同</li>
+<li>矩阵合同：设<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo separator="true">,</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A,B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>均为复数域上的n阶对称矩阵,则<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span></span></span></span>与<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>在复数域上合同等价于<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span></span></span></span>与<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>的秩相同；设<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo separator="true">,</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A,B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>均为实数域上的<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span>阶对称矩阵,则<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span></span></span></span>与<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>在实数域上合同等价于<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span></span></span></span>与<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>有相同的正、负惯性指数（即正、负特征值的个数相等）。</li>
 </ul>
-<p><img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211164007.png"
-alt="image.png" /> &gt; [!note] &gt; 设<span class="math inline">\(A\in
-C^{m\times n}\)</span> ，用<span
-class="math inline">\(\overline{A}\)</span>表示以A的元素的共轭复数为元素组成的矩阵，其中<span
-class="math inline">\(C^{m\times n}\)</span>表示元素属于复数域<span
-class="math inline">\(C\)</span>的全体<span
-class="math inline">\(m\times
-n\)</span>矩阵组成的集合，按矩阵的加法和数与矩阵的数量乘法构成复数域<span
-class="math inline">\(C\)</span>上的线性空间； 则有：<span
-class="math inline">\(A^H=(\overline{A})^T\)</span>，其中<span
-class="math inline">\((\overline{A})^T\)</span>表示对<span
-class="math inline">\(\overline{A}\)</span>取转置<span
-class="math inline">\(A^H\)</span>称为<span
-class="math inline">\(A\)</span>的共轭转置矩阵 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211170208.png"
-alt="image.png" /></p>
-<blockquote>
-<p>[!note] 和实数上的正交矩阵基本相同</p>
 </blockquote>
-<h2 id="正规矩阵">正规矩阵</h2>
-<p><img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211170347.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211170401.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211171145.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211171423.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211171451.png"
-alt="image.png" /> # Chapter 3 矩阵的Jordan标准形</p>
-<p>本章主要讨论<span
-class="math inline">\(\lambda\)</span>-矩阵的概念与基本性质，及其Smith标准形，然后利用<span
-class="math inline">\(\lambda\)</span>-矩阵的理论导出矩阵的Jordan标准形，最后给出矩阵的Cayley-Hamiltom定理</p>
-<h2 id="lambda-矩阵及其smith标准形"><span
-class="math inline">\(\lambda\)</span>-矩阵及其Smith标准形</h2>
-<p><img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213161604.png"
-alt="image.png" /> - 多项式表示法 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213165627.png"
-alt="image.png" /></p>
-<p><span
-class="math inline">\(\lambda\)</span>-矩阵和普通矩阵有很多概念是一样的：
-- 秩的概念 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213170654.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213171545.png"
-alt="image.png" /></p>
+<blockquote>
+<p>[!example]<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211145527.png" alt="image.png" /></p>
 <ul>
-<li>逆矩阵的概念 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213170821.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213170957.png"
-alt="image.png" /></li>
+<li>第一问已知坐标变换，求线性变换<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span>在基下的矩阵
+<ul>
+<li>首先要求得坐标的变换公式</li>
+<li>然后要求得线性变换<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span>下的矩阵</li>
+<li>最后根据坐标和线性变换的关系求得矩阵</li>
+</ul>
+</li>
+<li>第二问已知变换矩阵<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>，要求得变换矩阵<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span></span></span></span>
+<ul>
+<li>首先需要找到两个基的过渡矩阵</li>
+<li>然后根据过渡矩阵和线性变换的关系求得<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span></span></span></span></li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h2 id="正交变换与酉变换"><a class="markdownIt-Anchor" href="#正交变换与酉变换"></a> 正交变换与酉变换</h2>
+<p>在内积空间中有一种特殊的线性变换，它保持向量的内 积不变，这种变换称为酉（正交）变换</p>
+<h3 id="正交矩阵与正交变换"><a class="markdownIt-Anchor" href="#正交矩阵与正交变换"></a> 正交矩阵与正交变换</h3>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211154557.png" alt="image.png" /></p>
+<ul>
+<li>
+<p>正交矩阵的充要条件<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211162120.png" alt="image.png" /></p>
+</li>
+<li>
+<p>一些线性变换的性质<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211162659.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211162817.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211162830.png" alt="image.png" /></p>
+</li>
+</ul>
+<h3 id="酉矩阵与酉变换"><a class="markdownIt-Anchor" href="#酉矩阵与酉变换"></a> 酉矩阵与酉变换</h3>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211164007.png" alt="image.png" /></p>
+<blockquote>
+<p>[!note]<br />
+设<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>C</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in C^{m\times n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72243em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.771331em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.771331em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">m</span><span class="mbin mtight">×</span><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span> ，用<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline{A}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">A</span></span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>表示以A的元素的共轭复数为元素组成的矩阵，其中<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>C</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">C^{m\times n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.771331em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.771331em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">m</span><span class="mbin mtight">×</span><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span>表示元素属于复数域<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span>的全体<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m\times n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span>矩阵组成的集合，按矩阵的加法和数与矩阵的数量乘法构成复数域<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span>上的线性空间；<br />
+则有：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>A</mi><mi>H</mi></msup><mo>=</mo><mo stretchy="false">(</mo><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover><msup><mo stretchy="false">)</mo><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">A^H=(\overline{A})^T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.08125em;">H</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.13333em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">A</span></span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span></span></span></span>，其中<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover><msup><mo stretchy="false">)</mo><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">(\overline{A})^T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.13333em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">A</span></span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span></span></span></span>表示对<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline{A}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">A</span></span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>取转置<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>A</mi><mi>H</mi></msup></mrow><annotation encoding="application/x-tex">A^H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.08125em;">H</span></span></span></span></span></span></span></span></span></span></span>称为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span></span></span></span>的共轭转置矩阵<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211170208.png" alt="image.png" /></p>
+</blockquote>
+<blockquote>
+<p>[!note]<br />
+和实数上的正交矩阵基本相同</p>
+</blockquote>
+<h2 id="正规矩阵"><a class="markdownIt-Anchor" href="#正规矩阵"></a> 正规矩阵</h2>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211170347.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211170401.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211171145.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211171423.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230211171451.png" alt="image.png" /></p>
+<h1 id="chapter-3-矩阵的jordan标准形"><a class="markdownIt-Anchor" href="#chapter-3-矩阵的jordan标准形"></a> Chapter 3 矩阵的Jordan标准形</h1>
+<p>本章主要讨论<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">λ</span></span></span></span>-矩阵的概念与基本性质，及其Smith标准形，然后利用<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">λ</span></span></span></span>-矩阵的理论导出矩阵的Jordan标准形，最后给出矩阵的Cayley-Hamiltom定理</p>
+<h2 id="lambda-矩阵及其smith标准形"><a class="markdownIt-Anchor" href="#lambda-矩阵及其smith标准形"></a> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">λ</span></span></span></span>-矩阵及其Smith标准形</h2>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213161604.png" alt="image.png" /></p>
+<ul>
+<li>多项式表示法<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213165627.png" alt="image.png" /></li>
+</ul>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">λ</span></span></span></span>-矩阵和普通矩阵有很多概念是一样的：</p>
+<ul>
+<li>
+<p>秩的概念<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213170654.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213171545.png" alt="image.png" /></p>
+</li>
+<li>
+<p>逆矩阵的概念<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213170821.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213170957.png" alt="image.png" /></p>
+</li>
 </ul>
 <blockquote>
-<p>[!attention] 注意，在<span class="math inline">\(n\)</span>阶<span
-class="math inline">\(\lambda\)</span>-矩阵中，可逆必满秩，反之则不然（因为可逆条件比较苛刻，需要保证行列式为非零常数，而满秩只要非零即可）</p>
+<p>[!attention]<br />
+注意，在<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span>阶<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">λ</span></span></span></span>-矩阵中，可逆必满秩，反之则不然（因为可逆条件比较苛刻，需要保证行列式为非零常数，而满秩只要非零即可）</p>
 </blockquote>
-<h3 id="lambda-矩阵的初等变换与等价"><span
-class="math inline">\(\lambda\)</span>-矩阵的初等变换与等价</h3>
+<h3 id="lambda-矩阵的初等变换与等价"><a class="markdownIt-Anchor" href="#lambda-矩阵的初等变换与等价"></a> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">λ</span></span></span></span>-矩阵的初等变换与等价</h3>
 <ul>
-<li><p>初等变换 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213172557.png"
-alt="image.png" /></p></li>
-<li><p>初等矩阵 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213172647.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213172733.png"
-alt="image.png" /></p></li>
-<li><p>初等矩阵的性质 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213172801.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213173020.png"
-alt="image.png" /></p></li>
-<li><p><span class="math inline">\(\lambda\)</span>-矩阵等价 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213173051.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213173826.png"
-alt="image.png" /></p></li>
+<li>
+<p>初等变换<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213172557.png" alt="image.png" /></p>
+</li>
+<li>
+<p>初等矩阵<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213172647.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213172733.png" alt="image.png" /></p>
+</li>
+<li>
+<p>初等矩阵的性质<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213172801.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213173020.png" alt="image.png" /></p>
+</li>
+<li>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">λ</span></span></span></span>-矩阵等价<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213173051.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213173826.png" alt="image.png" /></p>
+</li>
 </ul>
 <blockquote>
-<p>[!attention] -
--矩阵的等价关系与一般等价关系一样，满足自反性，对称性和传递性 -
-注意，若<span class="math inline">\(B(\lambda) \cong
-A(\lambda)\)</span>，则有<span class="math inline">\(\vert B(\lambda) =
-c\vert A(\lambda) \vert\)</span></p>
+<p>[!attention]</p>
+<ul>
+<li>\lambda-矩阵的等价关系与一般等价关系一样，满足自反性，对称性和传递性</li>
+<li>注意，若<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo><mo>≅</mo><mi>A</mi><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">B(\lambda) \cong A(\lambda)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mopen">(</span><span class="mord mathnormal">λ</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≅</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">A</span><span class="mopen">(</span><span class="mord mathnormal">λ</span><span class="mclose">)</span></span></span></span>，则有<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mi>B</mi><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo><mo>=</mo><mi>c</mi><mi mathvariant="normal">∣</mi><mi>A</mi><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo><mi mathvariant="normal">∣</mi></mrow><annotation encoding="application/x-tex">\vert B(\lambda) = c\vert A(\lambda) \vert</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mopen">(</span><span class="mord mathnormal">λ</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">c</span><span class="mord">∣</span><span class="mord mathnormal">A</span><span class="mopen">(</span><span class="mord mathnormal">λ</span><span class="mclose">)</span><span class="mord">∣</span></span></span></span></li>
+</ul>
 </blockquote>
-<p><img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213182625.png"
-alt="image.png" /> &gt; [!attention] &gt;
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213182625.png" alt="image.png" /></p>
+<blockquote>
+<p>[!attention]<br />
 3.1.4的逆命题不成立，即秩相等，但不一定等价</p>
-<h2 id="lambda-矩阵的smith标准形"><span
-class="math inline">\(\lambda\)</span>-矩阵的Smith标准形</h2>
-<figure>
-<img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213201904.png"
-alt="image.png" />
-<figcaption aria-hidden="true">image.png</figcaption>
-</figure>
+</blockquote>
+<h2 id="lambda-矩阵的smith标准形"><a class="markdownIt-Anchor" href="#lambda-矩阵的smith标准形"></a> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">λ</span></span></span></span>-矩阵的Smith标准形</h2>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213201904.png" alt="image.png" /></p>
 <blockquote>
-<p>[!note] 如何化<span
-class="math inline">\(\lambda\)</span>矩阵为标准形？ - case 1: <span
-class="math inline">\(a_{11}\)</span>能整除一切
-在这种情况下用第一行及第一列消去其他元素 - case 2: <span
-class="math inline">\(a_{11}\)</span>不能整除一切<span
-class="math inline">\(a_{ij}\)</span>，可以利用初等变换降低<span
-class="math inline">\(a_{11}\)</span>次数，具体分为三种情况： 1.
-第一行存在元素不能被<span class="math inline">\(a_{11}\)</span>整除：
-互换列 2. 第一列存在元素不能被<span
-class="math inline">\(a_{11}\)</span>整除： 互换行 3. <span
-class="math inline">\(a_{ii}\)</span>不能被<span
-class="math inline">\(a_{11}\)</span>整除：
-通过消除元素，变成上面两种情况</p>
+<p>[!note]<br />
+如何化<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">λ</span></span></span></span>矩阵为标准形？</p>
+<ul>
+<li>case 1: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>11</mn></msub></mrow><annotation encoding="application/x-tex">a_{11}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>能整除一切<br />
+在这种情况下用第一行及第一列消去其他元素</li>
+<li>case 2: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>11</mn></msub></mrow><annotation encoding="application/x-tex">a_{11}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>不能整除一切<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">a_{ij}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span>，可以利用初等变换降低<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>11</mn></msub></mrow><annotation encoding="application/x-tex">a_{11}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>次数，具体分为三种情况：
+<ol>
+<li>第一行存在元素不能被<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>11</mn></msub></mrow><annotation encoding="application/x-tex">a_{11}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>整除：<br />
+互换列</li>
+<li>第一列存在元素不能被<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>11</mn></msub></mrow><annotation encoding="application/x-tex">a_{11}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>整除：<br />
+互换行</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mrow><mi>i</mi><mi>i</mi></mrow></msub></mrow><annotation encoding="application/x-tex">a_{ii}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mord mathnormal mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>不能被<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>11</mn></msub></mrow><annotation encoding="application/x-tex">a_{11}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>整除：<br />
+通过消除元素，变成上面两种情况</li>
+</ol>
+</li>
+</ul>
 </blockquote>
 <ul>
-<li><p>不变因子 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213203640.png"
-alt="image.png" /></p></li>
-<li><p>初等因子 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213203807.png"
-alt="image.png" /> &gt; [!note] &gt; 一共有<span
-class="math inline">\(rankA(\lambda)=r\)</span>，因此每一列有<span
-class="math inline">\(r\)</span>个</p></li>
-<li><p>一些关于不变因子和初等因子的性质 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213205100.png"
-alt="image.png" /></p></li>
+<li>
+<p>不变因子<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213203640.png" alt="image.png" /></p>
+</li>
+<li>
+<p>初等因子<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213203807.png" alt="image.png" /></p>
+</li>
 </ul>
 <blockquote>
-<p>[!example] 关于如何找到不变因子的例题： <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213211148.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213211203.png"
-alt="image.png" /></p>
+<p>[!note]<br />
+一共有<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>a</mi><mi>n</mi><mi>k</mi><mi>A</mi><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo><mo>=</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">rankA(\lambda)=r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">a</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord mathnormal">A</span><span class="mopen">(</span><span class="mord mathnormal">λ</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span>，因此每一列有<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span>个</p>
 </blockquote>
-<h3 id="lambda-矩阵的行列式因子"><span
-class="math inline">\(\lambda\)</span>-矩阵的行列式因子</h3>
-<p>？？？ 这里没太懂 <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213211539.png"
-alt="image.png" /> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213211848.png"
-alt="image.png" /> &gt; [!example] &gt; 利用行列式因子求解不变因子的方法
-&gt; <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213212646.png"
-alt="image.png" /></p>
+<ul>
+<li>一些关于不变因子和初等因子的性质<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213205100.png" alt="image.png" /></li>
+</ul>
+<blockquote>
+<p>[!example]<br />
+关于如何找到不变因子的例题：<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213211148.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213211203.png" alt="image.png" /></p>
+</blockquote>
+<h3 id="lambda-矩阵的行列式因子"><a class="markdownIt-Anchor" href="#lambda-矩阵的行列式因子"></a> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">λ</span></span></span></span>-矩阵的行列式因子</h3>
+<p>？？？ 这里没太懂<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213211539.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213211848.png" alt="image.png" /></p>
+<blockquote>
+<p>[!example]<br />
+利用行列式因子求解不变因子的方法<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230213212646.png" alt="image.png" /></p>
+</blockquote>
 
       
     </div>
@@ -880,10 +759,10 @@ alt="image.png" /></p>
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="安装wslg">安装WSLg</h1>
+          <h1 id="安装wslg"><a class="markdownIt-Anchor" href="#安装wslg"></a> 安装WSLg</h1>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 更新所有的源</span></span><br><span class="line">sudo apt update</span><br><span class="line"></span><br><span class="line"><span class="comment">## Gedit</span></span><br><span class="line">sudo apt install gedit -y</span><br></pre></td></tr></table></figure>
-<p>在vscode中可以运行matplotlib： <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/Pasted%2520image%252020221121213950.png" /></p>
+<p>在vscode中可以运行matplotlib：<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/Pasted%2520image%252020221121213950.png" alt="" /></p>
 
       
     </div>
@@ -951,38 +830,49 @@ src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/Pasted%252
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="linux下环境配置">Linux下环境配置</h1>
-<h2 id="miniconda安装">Miniconda安装</h2>
-<p>这个非常简单，直接去官网下载shell脚本，然后安装即可，记得使用conda
-init初始化bash，这样每次登录shell就会自动进入conda环境...</p>
-<h3 id="源配置">源配置</h3>
-<p>选取北京外国语大学的源（清华源有的时候会卡，不过北外的源也是清华维护，不知道是什么原因）：
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">channels:</span><br><span class="line">  - defaults</span><br><span class="line">show_channel_urls: true</span><br><span class="line">default_channels:</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/main</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/r</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/msys2</span><br><span class="line">custom_channels:</span><br><span class="line">  conda-forge: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  msys2: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  bioconda: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  menpo: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  pytorch: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  pytorch-lts: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  simpleitk: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br></pre></td></tr></table></figure></p>
-<h2 id="pytorch安装">Pytorch安装</h2>
-<p>如果想要获取炼丹环境，使用anaconda安装cudnn/cuda是个很好的选择！
-然而现在的nvidia/linux-64的官方anaconda源在国内的速度为0，为了切换为国内源，需要额外添加一个源：
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvidia: https://mirrors.sustech.edu.cn/anaconda-extra/cloud</span><br></pre></td></tr></table></figure></p>
-<p>我的.condarc是这样的： <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">channels:</span><br><span class="line">  - defaults</span><br><span class="line">show_channel_urls: true</span><br><span class="line">default_channels:</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/main</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/r</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/msys2</span><br><span class="line">custom_channels:</span><br><span class="line">  nvidia: https://mirrors.sustech.edu.cn/anaconda-extra/cloud</span><br><span class="line">  conda-forge: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  msys2: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  bioconda: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  menpo: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  pytorch: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  pytorch-lts: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  simpleitk: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br></pre></td></tr></table></figure></p>
-<ol type="1">
-<li><p>创建新的anaconda环境： <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n &quot;pytorch&quot; python=3.8</span><br></pre></td></tr></table></figure>
-创建新的环境有利于我们更加合理的管理包之间的依赖，防止包之间的环境污染</p></li>
-<li><p>进入pytorch官网：<a target="_blank" rel="noopener" href="https://pytorch.org/">PyTorch</a> <img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/Pasted%2520image%252020221112201609.png" />
-选择合适的版本，并复制命令行，例如在我的电脑上安装的命令为：
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia</span><br></pre></td></tr></table></figure></p></li>
+          <h1 id="linux下环境配置"><a class="markdownIt-Anchor" href="#linux下环境配置"></a> Linux下环境配置</h1>
+<h2 id="miniconda安装"><a class="markdownIt-Anchor" href="#miniconda安装"></a> Miniconda安装</h2>
+<p>这个非常简单，直接去官网下载shell脚本，然后安装即可，记得使用conda init初始化bash，这样每次登录shell就会自动进入conda环境…</p>
+<h3 id="源配置"><a class="markdownIt-Anchor" href="#源配置"></a> 源配置</h3>
+<p>选取北京外国语大学的源（清华源有的时候会卡，不过北外的源也是清华维护，不知道是什么原因）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">channels:</span><br><span class="line">  - defaults</span><br><span class="line">show_channel_urls: true</span><br><span class="line">default_channels:</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/main</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/r</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/msys2</span><br><span class="line">custom_channels:</span><br><span class="line">  conda-forge: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  msys2: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  bioconda: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  menpo: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  pytorch: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  pytorch-lts: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  simpleitk: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br></pre></td></tr></table></figure>
+<h2 id="pytorch安装"><a class="markdownIt-Anchor" href="#pytorch安装"></a> Pytorch安装</h2>
+<p>如果想要获取炼丹环境，使用anaconda安装cudnn/cuda是个很好的选择！<br />
+然而现在的nvidia/linux-64的官方anaconda源在国内的速度为0，为了切换为国内源，需要额外添加一个源：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvidia: https://mirrors.sustech.edu.cn/anaconda-extra/cloud</span><br></pre></td></tr></table></figure>
+<p>我的.condarc是这样的：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">channels:</span><br><span class="line">  - defaults</span><br><span class="line">show_channel_urls: true</span><br><span class="line">default_channels:</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/main</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/r</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/msys2</span><br><span class="line">custom_channels:</span><br><span class="line">  nvidia: https://mirrors.sustech.edu.cn/anaconda-extra/cloud</span><br><span class="line">  conda-forge: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  msys2: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  bioconda: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  menpo: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  pytorch: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  pytorch-lts: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  simpleitk: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br></pre></td></tr></table></figure>
+<ol>
+<li>
+<p>创建新的anaconda环境：</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n &quot;pytorch&quot; python=3.8</span><br></pre></td></tr></table></figure>
+<p>创建新的环境有利于我们更加合理的管理包之间的依赖，防止包之间的环境污染</p>
+</li>
+<li>
+<p>进入pytorch官网：<a target="_blank" rel="noopener" href="https://pytorch.org/">PyTorch</a><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/Pasted%2520image%252020221112201609.png" alt="" /><br />
+选择合适的版本，并复制命令行，例如在我的电脑上安装的命令为：</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
-<h2 id="java安装">Java安装</h2>
-<ol type="1">
-<li><p>下载JDK，推荐地址<a
-target="_blank" rel="noopener" href="https://mirrors.huaweicloud.com/java/jdk/">Index of java-local/jdk
-(huaweicloud.com)</a></p></li>
-<li><p>配置环境变量
-根据使用的shell进行配置，例如：使用bash就用<code>vim ~/.bashrc</code>配置，使用zsh就使用<code>vim ~/.zshrc</code>配置
-配置的变量如下： <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_202</span><br><span class="line">export JRE_HOME=$&#123;JAVA_HOME&#125;/jre</span><br><span class="line">export CLASSPATH=.:$&#123;JAVA_HOME&#125;/lib:$&#123;JRE_HOME&#125;/lib</span><br><span class="line">export PATH=$&#123;JAVA_HOME&#125;/bin:$PATH</span><br></pre></td></tr></table></figure></p></li>
-<li><p>重新打开终端或者执行<code>source ~/.zshrc</code>进行刷新</p></li>
-<li><p>执行<code>java -version</code>，如果出现如下的语句说明配置成功
-<img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/Pasted%2520image%252020221130205223.png" /></p></li>
+<h2 id="java安装"><a class="markdownIt-Anchor" href="#java安装"></a> Java安装</h2>
+<ol>
+<li>
+<p>下载JDK，推荐地址<a target="_blank" rel="noopener" href="https://mirrors.huaweicloud.com/java/jdk/">Index of java-local/jdk (huaweicloud.com)</a></p>
+</li>
+<li>
+<p>配置环境变量<br />
+根据使用的shell进行配置，例如：使用bash就用<code>vim ~/.bashrc</code>配置，使用zsh就使用<code>vim ~/.zshrc</code>配置<br />
+配置的变量如下：</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_202</span><br><span class="line">export JRE_HOME=$&#123;JAVA_HOME&#125;/jre</span><br><span class="line">export CLASSPATH=.:$&#123;JAVA_HOME&#125;/lib:$&#123;JRE_HOME&#125;/lib</span><br><span class="line">export PATH=$&#123;JAVA_HOME&#125;/bin:$PATH</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>重新打开终端或者执行<code>source ~/.zshrc</code>进行刷新</p>
+</li>
+<li>
+<p>执行<code>java -version</code>，如果出现如下的语句说明配置成功<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/Pasted%2520image%252020221130205223.png" alt="" /></p>
+</li>
 </ol>
 
       
@@ -1051,23 +941,23 @@ src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/Pasted%252
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="好特征比好模型重要">好特征比好模型重要</h1>
-<p>在比赛中，有两个维度来看待特征和数据的关系： 1.
-训练集和测试集的特征是否相同？
-对于那些特征分布不同的特征，我们需要加以修改，比如给定一个bool值，设置区间进行判断，或者直接drop分布不同的特征（因为添加他们可能在训练集上效果好，但是在测试集上是欠拟合的）
-2. 训练集中是否有异常的特征数据？
-异常的特征数据会扰乱我们的模型，因此我们需要将它们完全剔除</p>
-<h1 id="几个模型比一个模型好">几个模型比一个模型好</h1>
-<p>如果一个模型的泛化性能很差，可以考虑不同的几个模型，放在一起设置权重预测，就像这样（请忽略这段代码的冗余，关注它们放在一起预测的思想）：
-<img
-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230204205744.png"
-alt="image.png" /></p>
-<h1 id="线下baseline很重要">线下baseline很重要</h1>
-<ol type="1">
+          <h1 id="好特征比好模型重要"><a class="markdownIt-Anchor" href="#好特征比好模型重要"></a> 好特征比好模型重要</h1>
+<p>在比赛中，有两个维度来看待特征和数据的关系：</p>
+<ol>
+<li>训练集和测试集的特征是否相同？<br />
+对于那些特征分布不同的特征，我们需要加以修改，比如给定一个bool值，设置区间进行判断，或者直接drop分布不同的特征（因为添加他们可能在训练集上效果好，但是在测试集上是欠拟合的）</li>
+<li>训练集中是否有异常的特征数据？<br />
+异常的特征数据会扰乱我们的模型，因此我们需要将它们完全剔除</li>
+</ol>
+<h1 id="几个模型比一个模型好"><a class="markdownIt-Anchor" href="#几个模型比一个模型好"></a> 几个模型比一个模型好</h1>
+<p>如果一个模型的泛化性能很差，可以考虑不同的几个模型，放在一起设置权重预测，就像这样（请忽略这段代码的冗余，关注它们放在一起预测的思想）：<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230204205744.png" alt="image.png" /></p>
+<h1 id="线下baseline很重要"><a class="markdownIt-Anchor" href="#线下baseline很重要"></a> 线下baseline很重要</h1>
+<ol>
 <li>如果可以交叉验证，那就使用交叉验证</li>
 <li>如果模型过拟合，要及时停止，或者调整参数</li>
 </ol>
-<h1 id="多打比赛挺有意思">多打比赛，挺有意思</h1>
+<h1 id="多打比赛挺有意思"><a class="markdownIt-Anchor" href="#多打比赛挺有意思"></a> 多打比赛，挺有意思</h1>
 <p>第一次参加，有很多不足的地方，以后可以多参加，能学到不少东西！</p>
 
       
@@ -1318,60 +1208,10 @@ window.addEventListener('pjax:success', () => {
 
   
       
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
+  <script src="//cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.css">
 
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-          load: ['[tex]/mhchem'],
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-          packages: {'[+]': ['mhchem']},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
-    
 
   
 

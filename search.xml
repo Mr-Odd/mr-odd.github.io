@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>第一次参加机器学习比赛经验</title>
+    <url>/2023/02/04/Machine%20Learning/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8F%82%E5%8A%A0%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%AF%94%E8%B5%9B%E7%BB%8F%E9%AA%8C/</url>
+    <content><![CDATA[<h1 id="好特征比好模型重要"><a class="markdownIt-Anchor" href="#好特征比好模型重要"></a> 好特征比好模型重要</h1>
+<p>在比赛中，有两个维度来看待特征和数据的关系：</p>
+<ol>
+<li>训练集和测试集的特征是否相同？<br />
+对于那些特征分布不同的特征，我们需要加以修改，比如给定一个bool值，设置区间进行判断，或者直接drop分布不同的特征（因为添加他们可能在训练集上效果好，但是在测试集上是欠拟合的）</li>
+<li>训练集中是否有异常的特征数据？<br />
+异常的特征数据会扰乱我们的模型，因此我们需要将它们完全剔除</li>
+</ol>
+<h1 id="几个模型比一个模型好"><a class="markdownIt-Anchor" href="#几个模型比一个模型好"></a> 几个模型比一个模型好</h1>
+<p>如果一个模型的泛化性能很差，可以考虑不同的几个模型，放在一起设置权重预测，就像这样（请忽略这段代码的冗余，关注它们放在一起预测的思想）：<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230204205744.png" alt="image.png" /></p>
+<h1 id="线下baseline很重要"><a class="markdownIt-Anchor" href="#线下baseline很重要"></a> 线下baseline很重要</h1>
+<ol>
+<li>如果可以交叉验证，那就使用交叉验证</li>
+<li>如果模型过拟合，要及时停止，或者调整参数</li>
+</ol>
+<h1 id="多打比赛挺有意思"><a class="markdownIt-Anchor" href="#多打比赛挺有意思"></a> 多打比赛，挺有意思</h1>
+<p>第一次参加，有很多不足的地方，以后可以多参加，能学到不少东西！</p>
+]]></content>
+      <categories>
+        <category>Machine Learning</category>
+      </categories>
+  </entry>
+  <entry>
     <title>矩阵论</title>
     <url>/2023/02/09/Math/%E7%9F%A9%E9%98%B5%E8%AE%BA/</url>
     <content><![CDATA[<h1 id="chapter-1-线性空间与内积空间"><a class="markdownIt-Anchor" href="#chapter-1-线性空间与内积空间"></a> Chapter 1 线性空间与内积空间</h1>
@@ -502,32 +528,6 @@
 ]]></content>
       <categories>
         <category>Misc</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>第一次参加机器学习比赛经验</title>
-    <url>/2023/02/04/Machine%20Learning/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8F%82%E5%8A%A0%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%AF%94%E8%B5%9B%E7%BB%8F%E9%AA%8C/</url>
-    <content><![CDATA[<h1 id="好特征比好模型重要"><a class="markdownIt-Anchor" href="#好特征比好模型重要"></a> 好特征比好模型重要</h1>
-<p>在比赛中，有两个维度来看待特征和数据的关系：</p>
-<ol>
-<li>训练集和测试集的特征是否相同？<br />
-对于那些特征分布不同的特征，我们需要加以修改，比如给定一个bool值，设置区间进行判断，或者直接drop分布不同的特征（因为添加他们可能在训练集上效果好，但是在测试集上是欠拟合的）</li>
-<li>训练集中是否有异常的特征数据？<br />
-异常的特征数据会扰乱我们的模型，因此我们需要将它们完全剔除</li>
-</ol>
-<h1 id="几个模型比一个模型好"><a class="markdownIt-Anchor" href="#几个模型比一个模型好"></a> 几个模型比一个模型好</h1>
-<p>如果一个模型的泛化性能很差，可以考虑不同的几个模型，放在一起设置权重预测，就像这样（请忽略这段代码的冗余，关注它们放在一起预测的思想）：<br />
-<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230204205744.png" alt="image.png" /></p>
-<h1 id="线下baseline很重要"><a class="markdownIt-Anchor" href="#线下baseline很重要"></a> 线下baseline很重要</h1>
-<ol>
-<li>如果可以交叉验证，那就使用交叉验证</li>
-<li>如果模型过拟合，要及时停止，或者调整参数</li>
-</ol>
-<h1 id="多打比赛挺有意思"><a class="markdownIt-Anchor" href="#多打比赛挺有意思"></a> 多打比赛，挺有意思</h1>
-<p>第一次参加，有很多不足的地方，以后可以多参加，能学到不少东西！</p>
-]]></content>
-      <categories>
-        <category>Machine Learning</category>
       </categories>
   </entry>
   <entry>

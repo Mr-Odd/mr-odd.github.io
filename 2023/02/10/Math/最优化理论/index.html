@@ -22,13 +22,14 @@
     var CONFIG = {"hostname":"mr-odd.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"manual"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="[!notice] 参考书籍：《最优化方法及其Matlab程序设计》——马昌凤   最优化理论基础  最优化问题的数学模型  最优化模型可以由目标函数和限制条件两部分组成   本书主要考虑非线性规划，非线性规划又分为：  无约束优化问题 等式约束优化问题 非等式约束优化问题  还有一些特殊的情况：  二次规划：目标函数为二次函数而约束函数都是线性函数 线性规划：目标函数和约束函数都是线性函数">
+  <meta name="description" content="[!notice] 参考书籍：《最优化方法及其Matlab程序设计》——马昌凤   全篇符号定义   最优化理论基础  最优化问题的数学模型  最优化模型可以由目标函数和限制条件两部分组成   本书主要考虑非线性规划，非线性规划又分为：  无约束优化问题 等式约束优化问题 非等式约束优化问题  还有一些特殊的情况：  二次规划：目标函数为二次函数而约束函数都是线性函数 线性规划：目标函数和约束函">
 <meta property="og:type" content="article">
 <meta property="og:title" content="最优化理论">
 <meta property="og:url" content="https://mr-odd.github.io/2023/02/10/Math/%E6%9C%80%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA/index.html">
 <meta property="og:site_name" content="Just an Odd">
-<meta property="og:description" content="[!notice] 参考书籍：《最优化方法及其Matlab程序设计》——马昌凤   最优化理论基础  最优化问题的数学模型  最优化模型可以由目标函数和限制条件两部分组成   本书主要考虑非线性规划，非线性规划又分为：  无约束优化问题 等式约束优化问题 非等式约束优化问题  还有一些特殊的情况：  二次规划：目标函数为二次函数而约束函数都是线性函数 线性规划：目标函数和约束函数都是线性函数">
+<meta property="og:description" content="[!notice] 参考书籍：《最优化方法及其Matlab程序设计》——马昌凤   全篇符号定义   最优化理论基础  最优化问题的数学模型  最优化模型可以由目标函数和限制条件两部分组成   本书主要考虑非线性规划，非线性规划又分为：  无约束优化问题 等式约束优化问题 非等式约束优化问题  还有一些特殊的情况：  二次规划：目标函数为二次函数而约束函数都是线性函数 线性规划：目标函数和约束函">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222175742.png">
 <meta property="og:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230212201906.png">
 <meta property="og:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230212202105.png">
 <meta property="og:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230212203637.png">
@@ -55,11 +56,32 @@
 <meta property="og:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-02-21%20001953.jpg">
 <meta property="og:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230221002516.png">
 <meta property="og:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230221002740.png">
+<meta property="og:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222173528.png">
+<meta property="og:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222173603.png">
+<meta property="og:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-02-22%20175108.jpg">
+<meta property="og:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-02-22%20175108.jpg">
+<meta property="og:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222180532.png">
+<meta property="og:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222180616.png">
+<meta property="og:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-02-22%20180647.jpg">
+<meta property="og:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222195420.png">
+<meta property="og:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222200054.png">
+<meta property="og:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222200110.png">
+<meta property="og:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-02-22%20203548.jpg">
+<meta property="og:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222200718.png">
+<meta property="og:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-02-22%20201129.jpg">
+<meta property="og:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-02-22%20201722.jpg">
+<meta property="og:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222203137.png">
+<meta property="og:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222205218.png">
+<meta property="og:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222204521.png">
+<meta property="og:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222204630.png">
+<meta property="og:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222205830.png">
+<meta property="og:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222210117.png">
+<meta property="og:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222210816.png">
 <meta property="article:published_time" content="2023-02-10T02:41:45.000Z">
-<meta property="article:modified_time" content="2023-02-21T14:20:00.199Z">
+<meta property="article:modified_time" content="2023-02-22T13:18:41.810Z">
 <meta property="article:author" content="Odd">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230212201906.png">
+<meta name="twitter:image" content="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222175742.png">
 
 <link rel="canonical" href="https://mr-odd.github.io/2023/02/10/Math/%E6%9C%80%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA/">
 
@@ -243,17 +265,8 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-02-21 22:20:00" itemprop="dateModified" datetime="2023-02-21T22:20:00+08:00">2023-02-21</time>
+                <time title="Modified: 2023-02-22 21:18:41" itemprop="dateModified" datetime="2023-02-22T21:18:41+08:00">2023-02-22</time>
               </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Math/" itemprop="url" rel="index"><span itemprop="name">Math</span></a>
-                </span>
-            </span>
 
           <br>
             <span class="post-meta-item" title="Symbols count in article">
@@ -261,14 +274,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>1.5k</span>
+              <span>2.6k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
+              <span>2 mins.</span>
             </span>
 
         </div>
@@ -284,6 +297,8 @@
 <p>[!notice]<br />
 参考书籍：《最优化方法及其Matlab程序设计》——马昌凤</p>
 </blockquote>
+<h1 id="全篇符号定义"><a class="markdownIt-Anchor" href="#全篇符号定义"></a> 全篇符号定义</h1>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222175742.png" alt="image.png" /></p>
 <h1 id="最优化理论基础"><a class="markdownIt-Anchor" href="#最优化理论基础"></a> 最优化理论基础</h1>
 <h2 id="最优化问题的数学模型"><a class="markdownIt-Anchor" href="#最优化问题的数学模型"></a> 最优化问题的数学模型</h2>
 <p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230212201906.png" alt="image.png" /><br />
@@ -406,6 +421,12 @@
 <p>凸函数的定义<br />
 <img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-02-21%20001953.jpg" alt="屏幕截图 2023-02-21 001953.jpg" /></p>
 </li>
+</ul>
+<blockquote>
+<p>[!note]<br />
+凸函数的定义实际上和之前高数中凸函数的定义（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mn>2</mn></mfrac><mo stretchy="false">)</mo><mo>≤</mo><mfrac><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>+</mo><mi>f</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">f(\frac{x+y}{2}) \le \frac{f(x)+f(y)}{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.199439em;vertical-align:-0.345em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.854439em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.446108em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="mbin mtight">+</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.355em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight">x</span><span class="mclose mtight">)</span><span class="mbin mtight">+</span><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>）类似，这是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\lambda = 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">λ</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span>的情况，这里使用<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">λ</span></span></span></span>更一般</p>
+</blockquote>
+<ul>
 <li>
 <p>凸函数的基本性质<br />
 <img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230221002516.png" alt="image.png" /></p>
@@ -414,7 +435,108 @@
 <p>判断凸性的几种方法<br />
 <img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230221002740.png" alt="image.png" /></p>
 </li>
+<li>
+<p>二阶导数判断凸性<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222173528.png" alt="image.png" /><br />
+推广到多元函数上：<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222173603.png" alt="image.png" /></p>
+</li>
 </ul>
+<h2 id="无约束问题的最优性条件"><a class="markdownIt-Anchor" href="#无约束问题的最优性条件"></a> 无约束问题的最优性条件</h2>
+<ul>
+<li>极小点的定义<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-02-22%20175108.jpg" alt="屏幕截图 2023-02-22 175108.jpg" /></li>
+</ul>
+<blockquote>
+<p>[!note]<br />
+一般来说，全局最优比较难求，因此通常只求局部极小点</p>
+</blockquote>
+<ul>
+<li>
+<p>一阶必要条件<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-02-22%20175108.jpg" alt="屏幕截图 2023-02-22 175108.jpg" /></p>
+</li>
+<li>
+<p>二阶必要条件<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222180532.png" alt="image.png" /></p>
+</li>
+<li>
+<p>二阶充分条件<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222180616.png" alt="image.png" /></p>
+</li>
+</ul>
+<blockquote>
+<p>[!note]<br />
+一般来说，目标函数的稳定点不一定是极小点。但对于目标函数是凸函数的无约束优化问题，其稳定点、局部极小点和全局极小点三者是等价的。</p>
+</blockquote>
+<ul>
+<li>凸函数无约束优化问题——全局极小值点的充要条件<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-02-22%20180647.jpg" alt="屏幕截图 2023-02-22 180647.jpg" /></li>
+</ul>
+<h2 id="无约束优化问题的算法框架"><a class="markdownIt-Anchor" href="#无约束优化问题的算法框架"></a> 无约束优化问题的算法框架</h2>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222195420.png" alt="image.png" /></p>
+<ul>
+<li>
+<p>一般算法框架：</p>
+<ol>
+<li>给定初始化参数及初始迭代点 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">x_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> ，置 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>:</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">k := 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span></span><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span></li>
+<li>若 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">x_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 满足某种终止准则, 停止迭代, 以<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">x_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>作为近似极小点</li>
+<li>通过求解 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">x_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 处的某个子问题确定下降方向 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">d_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></li>
+<li>通过某种搜索方式确定步长因子 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>α</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">\alpha_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> , 使得 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mi>k</mi></msub><mo>+</mo><msub><mi>α</mi><mi>k</mi></msub><msub><mi>d</mi><mi>k</mi></msub><mo stretchy="false">)</mo><mo>&lt;</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(x_k+\alpha_k d_k) \lt f(x_k)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></li>
+<li>令 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mi>k</mi></msub><mo>+</mo><mn>1</mn><mo>:</mo><mo>=</mo><msub><mi>x</mi><mi>k</mi></msub><mo>+</mo><msub><mi>α</mi><mi>k</mi></msub><msub><mi>d</mi><mi>k</mi></msub><mo separator="true">,</mo><mi>k</mi><mo>:</mo><mo>=</mo><mi>k</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">x_k+1 := x_k + \alpha_k d_k , k := k + 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span></span><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span></span><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>, 转步 2</li>
+</ol>
+</li>
+<li>
+<p>下降方向<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222200054.png" alt="image.png" /><br />
+若目标函数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> 是一阶连续可微的, 则判别 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">d_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 是否为下降方向将有更为方便的判别条件：<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222200110.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-02-22%20203548.jpg" alt="屏幕截图 2023-02-22 203548.jpg" /></p>
+</li>
+<li>
+<p>收敛性<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222200718.png" alt="image.png" /></p>
+</li>
+<li>
+<p>收敛速度<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-02-22%20201129.jpg" alt="屏幕截图 2023-02-22 201129.jpg" /></p>
+</li>
+<li>
+<p>终止条件<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-02-22%20201722.jpg" alt="屏幕截图 2023-02-22 201722.jpg" /></p>
+</li>
+</ul>
+<h1 id="线搜索技术"><a class="markdownIt-Anchor" href="#线搜索技术"></a> 线搜索技术</h1>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222203137.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222205218.png" alt="image.png" /></p>
+<p>线搜索技术分为两种：</p>
+<ol>
+<li>
+<p>精确线搜索</p>
+<p>基本思想：首先确定包含问题最优解的搜索区间，然后采用某种插值或分割技术缩小这个区间，进行搜索求解</p>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222204521.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222204630.png" alt="image.png" /></p>
+</li>
+<li>
+<p>非精确线搜索<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222205830.png" alt="image.png" /></p>
+</li>
+</ol>
+<h2 id="搜索区间"><a class="markdownIt-Anchor" href="#搜索区间"></a> 搜索区间</h2>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222210117.png" alt="image.png" /></p>
+<blockquote>
+<p>[!note]<br />
+这里强调了极小化问题，及单峰区间/单峰函数的概念，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>α</mi><mo>∗</mo></msup></mrow><annotation encoding="application/x-tex">\alpha^*</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.688696em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.688696em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span></span></span></span></span></span></span></span>是一个极小点</p>
+</blockquote>
+<h3 id="进退法确定搜索区间"><a class="markdownIt-Anchor" href="#进退法确定搜索区间"></a> 进退法确定搜索区间</h3>
+<p>其基本思想是从一点出发，按一定步长，试图确定函数值呈现 “高-低-高”的三点，从而得到一个近似的单峰区间<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230222210816.png" alt="image.png" /></p>
+<blockquote>
+<p>[!attention]<br />
+这个算法出现了笔误，step4中，应为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mi>m</mi><mi>i</mi><mi>n</mi><mo stretchy="false">{</mo><mi>α</mi><mo separator="true">,</mo><msub><mi>α</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">}</mo><mo separator="true">,</mo><mi>b</mi><mo>=</mo><mi>m</mi><mi>a</mi><mi>x</mi><mo stretchy="false">{</mo><mi>α</mi><mo separator="true">,</mo><msub><mi>α</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">a = min\{\alpha, \alpha_{k+1}\}, b = max\{\alpha, \alpha_{k+1}\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">m</span><span class="mord mathnormal">i</span><span class="mord mathnormal">n</span><span class="mopen">{</span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mclose">}</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">m</span><span class="mord mathnormal">a</span><span class="mord mathnormal">x</span><span class="mopen">{</span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mclose">}</span></span></span></span></p>
+</blockquote>
+<h2 id="精确线搜索"><a class="markdownIt-Anchor" href="#精确线搜索"></a> 精确线搜索</h2>
+<p>精确线搜索分为两类：一类是使用<strong>导数的搜索</strong>，如插值法，牛顿法及抛物线法等；另一类是不用导数的搜索，如 0.618 法，分数法及成功-失败法等，本书仅介绍 0.618 法和二次插值逼近法</p>
 
     </div>
 
@@ -492,7 +614,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%80%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80"><span class="nav-number">1.</span> <span class="nav-text"> 最优化理论基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98%E7%9A%84%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.1.</span> <span class="nav-text"> 最优化问题的数学模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%91%E9%87%8F%E5%92%8C%E7%9F%A9%E9%98%B5%E8%8C%83%E6%95%B0"><span class="nav-number">1.2.</span> <span class="nav-text"> 向量和矩阵范数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%B6%E6%95%9B%E6%80%A7%E8%AF%81%E6%98%8E"><span class="nav-number">1.2.1.</span> <span class="nav-text"> 收敛性证明</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%AF%E5%BE%AE%E6%80%A7%E4%B8%8E%E5%B1%95%E5%BC%80"><span class="nav-number">1.3.</span> <span class="nav-text"> 函数的可微性与展开</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%91%E9%87%8F%E5%80%BC%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%AF%E5%BE%AE%E6%80%A7%E5%8F%8A%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86"><span class="nav-number">1.3.1.</span> <span class="nav-text"> 向量值函数的可微性及中值定理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%B8%E9%9B%86%E4%B8%8E%E5%87%B8%E5%87%BD%E6%95%B0"><span class="nav-number">1.4.</span> <span class="nav-text"> 凸集与凸函数</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%A8%E7%AF%87%E7%AC%A6%E5%8F%B7%E5%AE%9A%E4%B9%89"><span class="nav-number">1.</span> <span class="nav-text"> 全篇符号定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%80%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80"><span class="nav-number">2.</span> <span class="nav-text"> 最优化理论基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98%E7%9A%84%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.1.</span> <span class="nav-text"> 最优化问题的数学模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%91%E9%87%8F%E5%92%8C%E7%9F%A9%E9%98%B5%E8%8C%83%E6%95%B0"><span class="nav-number">2.2.</span> <span class="nav-text"> 向量和矩阵范数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%B6%E6%95%9B%E6%80%A7%E8%AF%81%E6%98%8E"><span class="nav-number">2.2.1.</span> <span class="nav-text"> 收敛性证明</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%AF%E5%BE%AE%E6%80%A7%E4%B8%8E%E5%B1%95%E5%BC%80"><span class="nav-number">2.3.</span> <span class="nav-text"> 函数的可微性与展开</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%91%E9%87%8F%E5%80%BC%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%AF%E5%BE%AE%E6%80%A7%E5%8F%8A%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86"><span class="nav-number">2.3.1.</span> <span class="nav-text"> 向量值函数的可微性及中值定理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%B8%E9%9B%86%E4%B8%8E%E5%87%B8%E5%87%BD%E6%95%B0"><span class="nav-number">2.4.</span> <span class="nav-text"> 凸集与凸函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A0%E7%BA%A6%E6%9D%9F%E9%97%AE%E9%A2%98%E7%9A%84%E6%9C%80%E4%BC%98%E6%80%A7%E6%9D%A1%E4%BB%B6"><span class="nav-number">2.5.</span> <span class="nav-text"> 无约束问题的最优性条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A0%E7%BA%A6%E6%9D%9F%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98%E7%9A%84%E7%AE%97%E6%B3%95%E6%A1%86%E6%9E%B6"><span class="nav-number">2.6.</span> <span class="nav-text"> 无约束优化问题的算法框架</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BA%BF%E6%90%9C%E7%B4%A2%E6%8A%80%E6%9C%AF"><span class="nav-number">3.</span> <span class="nav-text"> 线搜索技术</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2%E5%8C%BA%E9%97%B4"><span class="nav-number">3.1.</span> <span class="nav-text"> 搜索区间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E9%80%80%E6%B3%95%E7%A1%AE%E5%AE%9A%E6%90%9C%E7%B4%A2%E5%8C%BA%E9%97%B4"><span class="nav-number">3.1.1.</span> <span class="nav-text"> 进退法确定搜索区间</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B2%BE%E7%A1%AE%E7%BA%BF%E6%90%9C%E7%B4%A2"><span class="nav-number">3.2.</span> <span class="nav-text"> 精确线搜索</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -557,12 +679,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">10k</span>
+    <span title="Symbols count total">11k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">9 mins.</span>
+    <span title="Reading time total">10 mins.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
   </div>

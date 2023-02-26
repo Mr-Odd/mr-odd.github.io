@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>WSL</title>
+    <url>/2023/02/08/Misc/WSL/</url>
+    <content><![CDATA[<h1 id="安装wslg"><a class="markdownIt-Anchor" href="#安装wslg"></a> 安装WSLg</h1>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">## 更新所有的源</span></span><br><span class="line">sudo apt update</span><br><span class="line"></span><br><span class="line"><span class="comment">## Gedit</span></span><br><span class="line">sudo apt install gedit -y</span><br></pre></td></tr></table></figure>
+<p>在vscode中可以运行matplotlib：<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/Pasted%2520image%252020221121213950.png" alt="" /></p>
+]]></content>
+      <categories>
+        <category>Misc</category>
+      </categories>
+  </entry>
+  <entry>
     <title>第一次参加机器学习比赛经验</title>
     <url>/2023/02/04/Machine%20Learning/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8F%82%E5%8A%A0%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%AF%94%E8%B5%9B%E7%BB%8F%E9%AA%8C/</url>
     <content><![CDATA[<h1 id="好特征比好模型重要"><a class="markdownIt-Anchor" href="#好特征比好模型重要"></a> 好特征比好模型重要</h1>
@@ -24,6 +36,58 @@
 ]]></content>
       <categories>
         <category>Machine Learning</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>环境配置问题</title>
+    <url>/2023/02/05/Misc/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="linux下环境配置"><a class="markdownIt-Anchor" href="#linux下环境配置"></a> Linux下环境配置</h1>
+<h2 id="miniconda安装"><a class="markdownIt-Anchor" href="#miniconda安装"></a> Miniconda安装</h2>
+<p>这个非常简单，直接去官网下载shell脚本，然后安装即可，记得使用conda init初始化bash，这样每次登录shell就会自动进入conda环境…</p>
+<h3 id="源配置"><a class="markdownIt-Anchor" href="#源配置"></a> 源配置</h3>
+<p>选取北京外国语大学的源（清华源有的时候会卡，不过北外的源也是清华维护，不知道是什么原因）：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">channels:</span><br><span class="line">  - defaults</span><br><span class="line">show_channel_urls: true</span><br><span class="line">default_channels:</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/main</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/r</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/msys2</span><br><span class="line">custom_channels:</span><br><span class="line">  conda-forge: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  msys2: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  bioconda: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  menpo: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  pytorch: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  pytorch-lts: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  simpleitk: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br></pre></td></tr></table></figure>
+<h2 id="pytorch安装"><a class="markdownIt-Anchor" href="#pytorch安装"></a> Pytorch安装</h2>
+<p>如果想要获取炼丹环境，使用anaconda安装cudnn/cuda是个很好的选择！<br />
+然而现在的nvidia/linux-64的官方anaconda源在国内的速度为0，为了切换为国内源，需要额外添加一个源：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvidia: https://mirrors.sustech.edu.cn/anaconda-extra/cloud</span><br></pre></td></tr></table></figure>
+<p>我的.condarc是这样的：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">channels:</span><br><span class="line">  - defaults</span><br><span class="line">show_channel_urls: true</span><br><span class="line">default_channels:</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/main</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/r</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/msys2</span><br><span class="line">custom_channels:</span><br><span class="line">  nvidia: https://mirrors.sustech.edu.cn/anaconda-extra/cloud</span><br><span class="line">  conda-forge: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  msys2: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  bioconda: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  menpo: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  pytorch: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  pytorch-lts: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  simpleitk: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br></pre></td></tr></table></figure>
+<ol>
+<li>
+<p>创建新的anaconda环境：</p>
+ <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda create -n &quot;pytorch&quot; python=3.8</span><br></pre></td></tr></table></figure>
+<p>创建新的环境有利于我们更加合理的管理包之间的依赖，防止包之间的环境污染</p>
+</li>
+<li>
+<p>进入pytorch官网：<a href="https://pytorch.org/">PyTorch</a><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/Pasted%2520image%252020221112201609.png" alt="" /><br />
+选择合适的版本，并复制命令行，例如在我的电脑上安装的命令为：</p>
+ <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="java安装"><a class="markdownIt-Anchor" href="#java安装"></a> Java安装</h2>
+<ol>
+<li>
+<p>下载JDK，推荐地址<a href="https://mirrors.huaweicloud.com/java/jdk/">Index of java-local/jdk (huaweicloud.com)</a></p>
+</li>
+<li>
+<p>配置环境变量<br />
+根据使用的shell进行配置，例如：使用bash就用<code>vim ~/.bashrc</code>配置，使用zsh就使用<code>vim ~/.zshrc</code>配置<br />
+配置的变量如下：</p>
+ <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_202</span><br><span class="line">export JRE_HOME=$&#123;JAVA_HOME&#125;/jre</span><br><span class="line">export CLASSPATH=.:$&#123;JAVA_HOME&#125;/lib:$&#123;JRE_HOME&#125;/lib</span><br><span class="line">export PATH=$&#123;JAVA_HOME&#125;/bin:$PATH</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>重新打开终端或者执行<code>source ~/.zshrc</code>进行刷新</p>
+</li>
+<li>
+<p>执行<code>java -version</code>，如果出现如下的语句说明配置成功<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/Pasted%2520image%252020221130205223.png" alt="" /></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Misc</category>
       </categories>
   </entry>
   <entry>
@@ -961,70 +1025,6 @@
 ]]></content>
       <categories>
         <category>Math</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>WSL</title>
-    <url>/2023/02/08/Misc/WSL/</url>
-    <content><![CDATA[<h1 id="安装wslg"><a class="markdownIt-Anchor" href="#安装wslg"></a> 安装WSLg</h1>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">## 更新所有的源</span></span><br><span class="line">sudo apt update</span><br><span class="line"></span><br><span class="line"><span class="comment">## Gedit</span></span><br><span class="line">sudo apt install gedit -y</span><br></pre></td></tr></table></figure>
-<p>在vscode中可以运行matplotlib：<br />
-<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/Pasted%2520image%252020221121213950.png" alt="" /></p>
-]]></content>
-      <categories>
-        <category>Misc</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>环境配置问题</title>
-    <url>/2023/02/05/Misc/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h1 id="linux下环境配置"><a class="markdownIt-Anchor" href="#linux下环境配置"></a> Linux下环境配置</h1>
-<h2 id="miniconda安装"><a class="markdownIt-Anchor" href="#miniconda安装"></a> Miniconda安装</h2>
-<p>这个非常简单，直接去官网下载shell脚本，然后安装即可，记得使用conda init初始化bash，这样每次登录shell就会自动进入conda环境…</p>
-<h3 id="源配置"><a class="markdownIt-Anchor" href="#源配置"></a> 源配置</h3>
-<p>选取北京外国语大学的源（清华源有的时候会卡，不过北外的源也是清华维护，不知道是什么原因）：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">channels:</span><br><span class="line">  - defaults</span><br><span class="line">show_channel_urls: true</span><br><span class="line">default_channels:</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/main</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/r</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/msys2</span><br><span class="line">custom_channels:</span><br><span class="line">  conda-forge: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  msys2: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  bioconda: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  menpo: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  pytorch: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  pytorch-lts: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  simpleitk: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br></pre></td></tr></table></figure>
-<h2 id="pytorch安装"><a class="markdownIt-Anchor" href="#pytorch安装"></a> Pytorch安装</h2>
-<p>如果想要获取炼丹环境，使用anaconda安装cudnn/cuda是个很好的选择！<br />
-然而现在的nvidia/linux-64的官方anaconda源在国内的速度为0，为了切换为国内源，需要额外添加一个源：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvidia: https://mirrors.sustech.edu.cn/anaconda-extra/cloud</span><br></pre></td></tr></table></figure>
-<p>我的.condarc是这样的：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">channels:</span><br><span class="line">  - defaults</span><br><span class="line">show_channel_urls: true</span><br><span class="line">default_channels:</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/main</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/r</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/msys2</span><br><span class="line">custom_channels:</span><br><span class="line">  nvidia: https://mirrors.sustech.edu.cn/anaconda-extra/cloud</span><br><span class="line">  conda-forge: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  msys2: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  bioconda: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  menpo: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  pytorch: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  pytorch-lts: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br><span class="line">  simpleitk: https://mirrors.bfsu.edu.cn/anaconda/cloud</span><br></pre></td></tr></table></figure>
-<ol>
-<li>
-<p>创建新的anaconda环境：</p>
- <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda create -n &quot;pytorch&quot; python=3.8</span><br></pre></td></tr></table></figure>
-<p>创建新的环境有利于我们更加合理的管理包之间的依赖，防止包之间的环境污染</p>
-</li>
-<li>
-<p>进入pytorch官网：<a href="https://pytorch.org/">PyTorch</a><br />
-<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/Pasted%2520image%252020221112201609.png" alt="" /><br />
-选择合适的版本，并复制命令行，例如在我的电脑上安装的命令为：</p>
- <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="java安装"><a class="markdownIt-Anchor" href="#java安装"></a> Java安装</h2>
-<ol>
-<li>
-<p>下载JDK，推荐地址<a href="https://mirrors.huaweicloud.com/java/jdk/">Index of java-local/jdk (huaweicloud.com)</a></p>
-</li>
-<li>
-<p>配置环境变量<br />
-根据使用的shell进行配置，例如：使用bash就用<code>vim ~/.bashrc</code>配置，使用zsh就使用<code>vim ~/.zshrc</code>配置<br />
-配置的变量如下：</p>
- <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_202</span><br><span class="line">export JRE_HOME=$&#123;JAVA_HOME&#125;/jre</span><br><span class="line">export CLASSPATH=.:$&#123;JAVA_HOME&#125;/lib:$&#123;JRE_HOME&#125;/lib</span><br><span class="line">export PATH=$&#123;JAVA_HOME&#125;/bin:$PATH</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>重新打开终端或者执行<code>source ~/.zshrc</code>进行刷新</p>
-</li>
-<li>
-<p>执行<code>java -version</code>，如果出现如下的语句说明配置成功<br />
-<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/Pasted%2520image%252020221130205223.png" alt="" /></p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Misc</category>
       </categories>
   </entry>
 </search>

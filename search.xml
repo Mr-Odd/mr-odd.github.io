@@ -1,30 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>博客说明</title>
-    <url>/2023/02/26/Misc/%E5%8D%9A%E5%AE%A2%E8%AF%B4%E6%98%8E/</url>
-    <content><![CDATA[<h1 id="写在前面"><a class="markdownIt-Anchor" href="#写在前面"></a> 写在前面</h1>
-<p>博客主要记录自己求学以来的一些收获，包括技术文章、数学笔记、个人感悟等等，受限于自己当时的理解能力，有些文章的内容可能质量不高、充满错误，如果发现了可以在本评论区下留言</p>
-<p>希望看到这个博客的你可以天天开心💕</p>
-<hr />
-<h1 id="详细说明"><a class="markdownIt-Anchor" href="#详细说明"></a> 详细说明</h1>
-<p>博客有以下几点需要说明：</p>
+    <title>第一次参加机器学习比赛经验</title>
+    <url>/2023/02/04/Machine%20Learning/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8F%82%E5%8A%A0%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%AF%94%E8%B5%9B%E7%BB%8F%E9%AA%8C/</url>
+    <content><![CDATA[<h1 id="好特征比好模型重要"><a class="markdownIt-Anchor" href="#好特征比好模型重要"></a> 好特征比好模型重要</h1>
+<p>在比赛中，有两个维度来看待特征和数据的关系：</p>
 <ol>
-<li>为了安全起见，评论系统只针对特定文章开放，如果你关注的文章没有开放评论，也欢迎在本文下留言</li>
-<li>博客更新频率不定，通常会在周六周日更新</li>
-<li>…待补充</li>
+<li>训练集和测试集的特征是否相同？<br />
+对于那些特征分布不同的特征，我们需要加以修改，比如给定一个bool值，设置区间进行判断，或者直接drop分布不同的特征（因为添加他们可能在训练集上效果好，但是在测试集上是欠拟合的）</li>
+<li>训练集中是否有异常的特征数据？<br />
+异常的特征数据会扰乱我们的模型，因此我们需要将它们完全剔除</li>
 </ol>
-<hr />
-<h1 id="博客搭建的技术栈"><a class="markdownIt-Anchor" href="#博客搭建的技术栈"></a> 博客搭建的技术栈</h1>
+<h1 id="几个模型比一个模型好"><a class="markdownIt-Anchor" href="#几个模型比一个模型好"></a> 几个模型比一个模型好</h1>
+<p>如果一个模型的泛化性能很差，可以考虑不同的几个模型，放在一起设置权重预测，就像这样（请忽略这段代码的冗余，关注它们放在一起预测的思想）：<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230204205744.png" alt="image.png" /></p>
+<h1 id="线下baseline很重要"><a class="markdownIt-Anchor" href="#线下baseline很重要"></a> 线下baseline很重要</h1>
 <ol>
-<li>博客由Hexo生成并部署在github</li>
-<li>博客主题：hexo-next</li>
-<li>评论插件：gitalk</li>
-<li>博客撰写：Obsidian</li>
+<li>如果可以交叉验证，那就使用交叉验证</li>
+<li>如果模型过拟合，要及时停止，或者调整参数</li>
 </ol>
+<h1 id="多打比赛挺有意思"><a class="markdownIt-Anchor" href="#多打比赛挺有意思"></a> 多打比赛，挺有意思</h1>
+<p>第一次参加，有很多不足的地方，以后可以多参加，能学到不少东西！</p>
 ]]></content>
       <categories>
-        <category>Misc</category>
+        <category>Machine Learning</category>
       </categories>
   </entry>
   <entry>
@@ -606,6 +605,48 @@
 <p>基本思想是从原问题的拉格朗日函数出发，再加上适当的罚函数，从而将原问题转化为求解一系列的无约束优化子问题。由于外罚函数法中的罚参数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>σ</mi><mi>k</mi></msub><mo>→</mo><mo>+</mo><mi mathvariant="normal">∞</mi></mrow><annotation encoding="application/x-tex">\sigma_k \rightarrow +\infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">+</span><span class="mord">∞</span></span></span></span>，因此增广目标函数变得“越来越病态”。增广目标函数的这种病态性质是外罚函数法的主要缺点，而这种缺陷在乘子法中由于引入拉格朗日函数及加上适当的罚函数而得以有效的克服</p>
 <p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-02-28%20120621.jpg" alt="屏幕截图 2023-02-28 120621.jpg" /></p>
 ]]></content>
+      <categories>
+        <category>Math</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>WSL</title>
+    <url>/2023/02/08/Misc/WSL/</url>
+    <content><![CDATA[<h1 id="安装wslg"><a class="markdownIt-Anchor" href="#安装wslg"></a> 安装WSLg</h1>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">## 更新所有的源</span></span><br><span class="line">sudo apt update</span><br><span class="line"></span><br><span class="line"><span class="comment">## Gedit</span></span><br><span class="line">sudo apt install gedit -y</span><br></pre></td></tr></table></figure>
+<p>在vscode中可以运行matplotlib：<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/Pasted%2520image%252020221121213950.png" alt="" /></p>
+]]></content>
+      <categories>
+        <category>Misc</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>博客说明</title>
+    <url>/2023/02/26/Misc/%E5%8D%9A%E5%AE%A2%E8%AF%B4%E6%98%8E/</url>
+    <content><![CDATA[<h1 id="写在前面"><a class="markdownIt-Anchor" href="#写在前面"></a> 写在前面</h1>
+<p>博客主要记录自己求学以来的一些收获，包括技术文章、数学笔记、个人感悟等等，受限于自己当时的理解能力，有些文章的内容可能质量不高、充满错误，如果发现了可以在本评论区下留言</p>
+<p>希望看到这个博客的你可以天天开心💕</p>
+<hr />
+<h1 id="详细说明"><a class="markdownIt-Anchor" href="#详细说明"></a> 详细说明</h1>
+<p>博客有以下几点需要说明：</p>
+<ol>
+<li>为了安全起见，评论系统只针对特定文章开放，如果你关注的文章没有开放评论，也欢迎在本文下留言</li>
+<li>博客更新频率不定，通常会在周六周日更新</li>
+<li>…待补充</li>
+</ol>
+<hr />
+<h1 id="博客搭建的技术栈"><a class="markdownIt-Anchor" href="#博客搭建的技术栈"></a> 博客搭建的技术栈</h1>
+<ol>
+<li>博客由Hexo生成并部署在github</li>
+<li>博客主题：hexo-next</li>
+<li>评论插件：gitalk</li>
+<li>博客撰写：Obsidian</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Misc</category>
+      </categories>
   </entry>
   <entry>
     <title>矩阵论</title>
@@ -1134,22 +1175,181 @@
 <p>[!example]<br />
 <img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230219220226.png" alt="image.png" /></p>
 </blockquote>
+<ul>
+<li>
+<p>Jordan型矩阵的初等因子<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230228163408.png" alt="image.png" /><br />
+相关证明过程：<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230301165047.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230301165056.png" alt="image.png" /></p>
+</li>
+<li>
+<p>矩阵的Jordan标准形<br />
+每一个方阵都与一个Jordan型矩阵相似<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230301172901.png" alt="image.png" /><br />
+证明：<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230301172914.png" alt="image.png" /></p>
+<blockquote>
+<p>[!error]<br />
+需要注意，这里<code>由定理3.3.3可得J与A相似</code>引用错误，应该是<strong>定理3.3.1</strong></p>
+</blockquote>
+<blockquote>
+<p>[!note]<br />
+由<strong>初等因子</strong>可以得到对应的<strong>Jordan标准形</strong></p>
+</blockquote>
+</li>
+<li>
+<p>重要推论<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230301174303.png" alt="image.png" /></p>
+<blockquote>
+<p>[!example]<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230301194809.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230301194821.png" alt="image.png" /></p>
+<ul>
+<li>总结求Jordan标准形的步骤：
+<ol>
+<li>求得<strong>初等因子</strong>形式为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo>−</mo><msub><mi>λ</mi><mi>i</mi></msub><msup><mo stretchy="false">)</mo><msub><mi>m</mi><mi>i</mi></msub></msup></mrow><annotation encoding="application/x-tex">(\lambda-\lambda_i)^{m_i}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">λ</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3280857142857143em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>，其中<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\lambda_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>就是Jordan标准形的<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mi>i</mi></msub><mtext>，</mtext><msub><mi>m</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\lambda_i，m_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord cjk_fallback">，</span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>表示其重复次数，</li>
+<li>按照初等因子中的<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mi>i</mi></msub><mtext>，</mtext><msub><mi>m</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\lambda_i，m_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord cjk_fallback">，</span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>写出Jordan标准形的大致结构</li>
+<li>并按照Jordan标准形补1</li>
+</ol>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<p>求得Jordan标准形后，需要求得相似变换的变换矩阵，在分块Jordan标准形中，有如下分块求法：<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230301194306.png" alt="image.png" /></p>
+<blockquote>
+<p>[!example]<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230302093837.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230302093907.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230302093944.png" alt="image.png" /><br />
+相似矩阵计算总结：</p>
+<ol>
+<li>计算Jordan标准形</li>
+<li>根据A(p_1, p_2, p_3)=(p_1, p_2, p_3)J列出方程组</li>
+<li>解方程组</li>
+</ol>
+<ul>
+<li>先解齐次线性方程组，再解非齐次线性方程组</li>
+<li>非齐次线性方程组中，先解向量已知的，再解向量未知的</li>
+</ul>
+</blockquote>
+<h2 id="cayley-hamiltom定理与最小多项式"><a class="markdownIt-Anchor" href="#cayley-hamiltom定理与最小多项式"></a> Cayley－Hamiltom定理与最小多项式</h2>
+<h3 id="cayley-hamiltom定理"><a class="markdownIt-Anchor" href="#cayley-hamiltom定理"></a> Cayley－Hamiltom定理</h3>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230302094422.png" alt="image.png" /></p>
+<blockquote>
+<p>[!example]<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230302174558.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230302174607.png" alt="image.png" /></p>
+</blockquote>
+<h3 id="矩阵的最小多项式"><a class="markdownIt-Anchor" href="#矩阵的最小多项式"></a> 矩阵的最小多项式</h3>
+<ul>
+<li>零化多项式<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230302174815.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230302174836.png" alt="image.png" />
+<blockquote>
+<p>[!example]<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230302175025.png" alt="image.png" /></p>
+</blockquote>
+</li>
+<li>最小多项式<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230302175137.png" alt="image.png" /><br />
+定理 3.4.3 <strong>相似矩阵</strong>有<strong>相同</strong>的<strong>最小多项式</strong><br />
+定理 3.4.4 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 阶矩阵 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span></span></span></span> 的<strong>最小多项式</strong>是<strong>唯一</strong>的<br />
+定理 3.4.5<br />
+(1) <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 阶矩阵 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span></span></span></span> 的<strong>最小多项式</strong>的根必定是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span></span></span></span> 的<strong>特征根</strong><br />
+(2) <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span></span></span></span> 的<strong>特征根</strong>必定是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span></span></span></span> 的<strong>最小多项式</strong>的根</li>
+<li>重要推论<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230302175441.png" alt="image.png" /></li>
+</ul>
+<p><img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230302175639.png" alt="image.png" /></p>
+<h1 id="chapter-4-矩阵分解"><a class="markdownIt-Anchor" href="#chapter-4-矩阵分解"></a> Chapter 4 矩阵分解</h1>
+<p>把矩阵<strong>分解为</strong>形式比较简单或具有某种特性的一些<strong>矩阵的乘积</strong>，一方面能明显地反映出原矩阵的某些数值特征，如矩阵的秩、行列式、特征值及奇异值等，另一方面分解的方法与过程往往提供了某些有效的数值计算方法和理论分析根据</p>
+<h2 id="矩阵的满秩分解"><a class="markdownIt-Anchor" href="#矩阵的满秩分解"></a> 矩阵的满秩分解</h2>
+<ul>
+<li>
+<p>满秩分解<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230302175856.png" alt="image.png" /></p>
+</li>
+<li>
+<p>平凡分解<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230302194214.png" alt="image.png" /></p>
+</li>
+<li>
+<p>满秩矩阵存在的条件<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230302194314.png" alt="image.png" /></p>
+<blockquote>
+<p>[!note]<br />
+矩阵 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span></span></span></span> 的满秩分解<strong>不是唯一</strong>的<br />
+定理 4.1.1 的证明过程表明，可以使用矩阵的<strong>初等行变换</strong>方法求矩阵的满秩分解</p>
+</blockquote>
+</li>
+<li>
+<p>求满秩分解的方法<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230302194548.png" alt="image.png" /></p>
+<blockquote>
+<p>[!example]<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230302195544.png" alt="image.png" /><br />
+总结一下求满秩矩阵的步骤：<br />
+目标：得到一个满秩分解，使得<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mi>F</mi><mi>G</mi></mrow><annotation encoding="application/x-tex">A=FG</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mord mathnormal">G</span></span></span></span></p>
+<ol>
+<li>矩阵<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span></span></span></span>先经过初等变换矩阵<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span>，得到一个阶梯矩阵<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>，并计算出<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>a</mi><mi>n</mi><mi>k</mi><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo><mo>=</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">rank(A)=r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">a</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span></li>
+<li>取<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>中前<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span>行做为矩阵<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">G</span></span></span></span></li>
+<li>再求得<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>P</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">P^{-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span>，取<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>P</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">P^{-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span>的前<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span>列作为矩阵<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi></mrow><annotation encoding="application/x-tex">F</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span>，即得满秩分解<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi></mrow><annotation encoding="application/x-tex">F</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span>和<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">G</span></span></span></span>，满足<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mi>F</mi><mi>G</mi></mrow><annotation encoding="application/x-tex">A=FG</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mord mathnormal">G</span></span></span></span><br />
+快速求得F的方法：<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230302201748.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230302201549.png" alt="image.png" /><br />
+从图中可以看出<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">G</span></span></span></span>的阶梯矩阵在第一列和第二列的第一个阶梯都不为0，因此可以把<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span></span></span></span>中的第1列和第二列作为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi></mrow><annotation encoding="application/x-tex">F</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span></li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<h2 id="矩阵的奇异值分解"><a class="markdownIt-Anchor" href="#矩阵的奇异值分解"></a> 矩阵的奇异值分解</h2>
+<ul>
+<li>
+<p>一些引理<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230302201906.png" alt="image.png" /></p>
+<blockquote>
+<p>[!note]<br />
+H表示共轭转置，共轭转置的步骤：</p>
+<ol>
+<li>对每个元素<strong>取共轭</strong>（实部不变，虚部取负）</li>
+<li>进行一次<strong>普通转置</strong></li>
+</ol>
+</blockquote>
+</li>
+<li>
+<p>奇异值<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230302203015.png" alt="image.png" /></p>
+<blockquote>
+<p>[!example]<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230302203418.png" alt="image.png" /><br />
+由例子可以看出来，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>谱范数（二范数）</mtext><mo>=</mo><mi>m</mi><mi>a</mi><mi>x</mi><mo stretchy="false">{</mo><msub><mi>σ</mi><mi>i</mi></msub><mo stretchy="false">}</mo><mo separator="true">,</mo><mo stretchy="false">(</mo><mi>i</mi><mo>=</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">谱范数（二范数）= max\{\sigma_i\}, (i=1,2,\dots,n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord cjk_fallback">谱</span><span class="mord cjk_fallback">范</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">（</span><span class="mord cjk_fallback">二</span><span class="mord cjk_fallback">范</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">）</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">m</span><span class="mord mathnormal">a</span><span class="mord mathnormal">x</span><span class="mopen">{</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">}</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mopen">(</span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>
+</blockquote>
+</li>
+<li>
+<p>奇异值分解<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230302203630.png" alt="image.png" /><br />
+“简单”证明：<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230302204557.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230302204617.png" alt="image.png" /><br />
+奇异值分解步骤：<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230302204639.png" alt="image.png" /></p>
+<blockquote>
+<p>[!example]<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230302204704.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230302204716.png" alt="image.png" /><br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230302204725.png" alt="image.png" /></p>
+</blockquote>
+</li>
+</ul>
+<h1 id="chapter-5-向量与矩阵的范数"><a class="markdownIt-Anchor" href="#chapter-5-向量与矩阵的范数"></a> Chapter 5 向量与矩阵的范数</h1>
+<p>本章内容主要介绍了向量范数和矩阵范数，知道范数定义和常见范数即可，具体可以查看<a href="%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90.md#%E5%90%91%E9%87%8F%E8%8C%83%E6%95%B0">向量范数</a>和<a href="%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90.md#%E7%9F%A9%E9%98%B5%E8%8C%83%E6%95%B0">矩阵范数</a>内容，在此不一一赘述</p>
 ]]></content>
-      <categories>
-        <category>Math</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>WSL</title>
-    <url>/2023/02/08/Misc/WSL/</url>
-    <content><![CDATA[<h1 id="安装wslg"><a class="markdownIt-Anchor" href="#安装wslg"></a> 安装WSLg</h1>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">## 更新所有的源</span></span><br><span class="line">sudo apt update</span><br><span class="line"></span><br><span class="line"><span class="comment">## Gedit</span></span><br><span class="line">sudo apt install gedit -y</span><br></pre></td></tr></table></figure>
-<p>在vscode中可以运行matplotlib：<br />
-<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/Pasted%2520image%252020221121213950.png" alt="" /></p>
-]]></content>
-      <categories>
-        <category>Misc</category>
-      </categories>
+      <tags>
+        <tag>Unfinished</tag>
+      </tags>
   </entry>
   <entry>
     <title>环境配置问题</title>
@@ -1201,32 +1401,6 @@
 ]]></content>
       <categories>
         <category>Misc</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>第一次参加机器学习比赛经验</title>
-    <url>/2023/02/04/Machine%20Learning/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8F%82%E5%8A%A0%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%AF%94%E8%B5%9B%E7%BB%8F%E9%AA%8C/</url>
-    <content><![CDATA[<h1 id="好特征比好模型重要"><a class="markdownIt-Anchor" href="#好特征比好模型重要"></a> 好特征比好模型重要</h1>
-<p>在比赛中，有两个维度来看待特征和数据的关系：</p>
-<ol>
-<li>训练集和测试集的特征是否相同？<br />
-对于那些特征分布不同的特征，我们需要加以修改，比如给定一个bool值，设置区间进行判断，或者直接drop分布不同的特征（因为添加他们可能在训练集上效果好，但是在测试集上是欠拟合的）</li>
-<li>训练集中是否有异常的特征数据？<br />
-异常的特征数据会扰乱我们的模型，因此我们需要将它们完全剔除</li>
-</ol>
-<h1 id="几个模型比一个模型好"><a class="markdownIt-Anchor" href="#几个模型比一个模型好"></a> 几个模型比一个模型好</h1>
-<p>如果一个模型的泛化性能很差，可以考虑不同的几个模型，放在一起设置权重预测，就像这样（请忽略这段代码的冗余，关注它们放在一起预测的思想）：<br />
-<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230204205744.png" alt="image.png" /></p>
-<h1 id="线下baseline很重要"><a class="markdownIt-Anchor" href="#线下baseline很重要"></a> 线下baseline很重要</h1>
-<ol>
-<li>如果可以交叉验证，那就使用交叉验证</li>
-<li>如果模型过拟合，要及时停止，或者调整参数</li>
-</ol>
-<h1 id="多打比赛挺有意思"><a class="markdownIt-Anchor" href="#多打比赛挺有意思"></a> 多打比赛，挺有意思</h1>
-<p>第一次参加，有很多不足的地方，以后可以多参加，能学到不少东西！</p>
-]]></content>
-      <categories>
-        <category>Machine Learning</category>
       </categories>
   </entry>
 </search>

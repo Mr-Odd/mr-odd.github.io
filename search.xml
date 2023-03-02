@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>第一次参加机器学习比赛经验</title>
-    <url>/2023/02/04/Machine%20Learning/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8F%82%E5%8A%A0%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%AF%94%E8%B5%9B%E7%BB%8F%E9%AA%8C/</url>
-    <content><![CDATA[<h1 id="好特征比好模型重要"><a class="markdownIt-Anchor" href="#好特征比好模型重要"></a> 好特征比好模型重要</h1>
-<p>在比赛中，有两个维度来看待特征和数据的关系：</p>
+    <title>博客说明</title>
+    <url>/2023/02/26/Misc/%E5%8D%9A%E5%AE%A2%E8%AF%B4%E6%98%8E/</url>
+    <content><![CDATA[<h1 id="写在前面"><a class="markdownIt-Anchor" href="#写在前面"></a> 写在前面</h1>
+<p>博客主要记录自己求学以来的一些收获，包括技术文章、数学笔记、个人感悟等等，受限于自己当时的理解能力，有些文章的内容可能质量不高、充满错误，如果发现了可以在本评论区下留言</p>
+<p>希望看到这个博客的你可以天天开心💕</p>
+<hr />
+<h1 id="详细说明"><a class="markdownIt-Anchor" href="#详细说明"></a> 详细说明</h1>
+<p>博客有以下几点需要说明：</p>
 <ol>
-<li>训练集和测试集的特征是否相同？<br />
-对于那些特征分布不同的特征，我们需要加以修改，比如给定一个bool值，设置区间进行判断，或者直接drop分布不同的特征（因为添加他们可能在训练集上效果好，但是在测试集上是欠拟合的）</li>
-<li>训练集中是否有异常的特征数据？<br />
-异常的特征数据会扰乱我们的模型，因此我们需要将它们完全剔除</li>
+<li>为了安全起见，评论系统只针对特定文章开放，如果你关注的文章没有开放评论，也欢迎在本文下留言</li>
+<li>博客更新频率不定，通常会在周六周日更新</li>
+<li>…待补充</li>
 </ol>
-<h1 id="几个模型比一个模型好"><a class="markdownIt-Anchor" href="#几个模型比一个模型好"></a> 几个模型比一个模型好</h1>
-<p>如果一个模型的泛化性能很差，可以考虑不同的几个模型，放在一起设置权重预测，就像这样（请忽略这段代码的冗余，关注它们放在一起预测的思想）：<br />
-<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230204205744.png" alt="image.png" /></p>
-<h1 id="线下baseline很重要"><a class="markdownIt-Anchor" href="#线下baseline很重要"></a> 线下baseline很重要</h1>
+<hr />
+<h1 id="博客搭建的技术栈"><a class="markdownIt-Anchor" href="#博客搭建的技术栈"></a> 博客搭建的技术栈</h1>
 <ol>
-<li>如果可以交叉验证，那就使用交叉验证</li>
-<li>如果模型过拟合，要及时停止，或者调整参数</li>
+<li>博客由Hexo生成并部署在github</li>
+<li>博客主题：hexo-next</li>
+<li>评论插件：gitalk</li>
+<li>博客撰写：Obsidian</li>
 </ol>
-<h1 id="多打比赛挺有意思"><a class="markdownIt-Anchor" href="#多打比赛挺有意思"></a> 多打比赛，挺有意思</h1>
-<p>第一次参加，有很多不足的地方，以后可以多参加，能学到不少东西！</p>
 ]]></content>
       <categories>
-        <category>Machine Learning</category>
+        <category>Misc</category>
       </categories>
   </entry>
   <entry>
@@ -607,45 +608,6 @@
 ]]></content>
       <categories>
         <category>Math</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>WSL</title>
-    <url>/2023/02/08/Misc/WSL/</url>
-    <content><![CDATA[<h1 id="安装wslg"><a class="markdownIt-Anchor" href="#安装wslg"></a> 安装WSLg</h1>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">## 更新所有的源</span></span><br><span class="line">sudo apt update</span><br><span class="line"></span><br><span class="line"><span class="comment">## Gedit</span></span><br><span class="line">sudo apt install gedit -y</span><br></pre></td></tr></table></figure>
-<p>在vscode中可以运行matplotlib：<br />
-<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/Pasted%2520image%252020221121213950.png" alt="" /></p>
-]]></content>
-      <categories>
-        <category>Misc</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>博客说明</title>
-    <url>/2023/02/26/Misc/%E5%8D%9A%E5%AE%A2%E8%AF%B4%E6%98%8E/</url>
-    <content><![CDATA[<h1 id="写在前面"><a class="markdownIt-Anchor" href="#写在前面"></a> 写在前面</h1>
-<p>博客主要记录自己求学以来的一些收获，包括技术文章、数学笔记、个人感悟等等，受限于自己当时的理解能力，有些文章的内容可能质量不高、充满错误，如果发现了可以在本评论区下留言</p>
-<p>希望看到这个博客的你可以天天开心💕</p>
-<hr />
-<h1 id="详细说明"><a class="markdownIt-Anchor" href="#详细说明"></a> 详细说明</h1>
-<p>博客有以下几点需要说明：</p>
-<ol>
-<li>为了安全起见，评论系统只针对特定文章开放，如果你关注的文章没有开放评论，也欢迎在本文下留言</li>
-<li>博客更新频率不定，通常会在周六周日更新</li>
-<li>…待补充</li>
-</ol>
-<hr />
-<h1 id="博客搭建的技术栈"><a class="markdownIt-Anchor" href="#博客搭建的技术栈"></a> 博客搭建的技术栈</h1>
-<ol>
-<li>博客由Hexo生成并部署在github</li>
-<li>博客主题：hexo-next</li>
-<li>评论插件：gitalk</li>
-<li>博客撰写：Obsidian</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Misc</category>
       </categories>
   </entry>
   <entry>
@@ -1347,9 +1309,24 @@ H表示共轭转置，共轭转置的步骤：</p>
 <h1 id="chapter-5-向量与矩阵的范数"><a class="markdownIt-Anchor" href="#chapter-5-向量与矩阵的范数"></a> Chapter 5 向量与矩阵的范数</h1>
 <p>本章内容主要介绍了向量范数和矩阵范数，知道范数定义和常见范数即可，具体可以查看<a href="%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90.md#%E5%90%91%E9%87%8F%E8%8C%83%E6%95%B0">向量范数</a>和<a href="%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90.md#%E7%9F%A9%E9%98%B5%E8%8C%83%E6%95%B0">矩阵范数</a>内容，在此不一一赘述</p>
 ]]></content>
+      <categories>
+        <category>Math</category>
+      </categories>
       <tags>
         <tag>Unfinished</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>WSL</title>
+    <url>/2023/02/08/Misc/WSL/</url>
+    <content><![CDATA[<h1 id="安装wslg"><a class="markdownIt-Anchor" href="#安装wslg"></a> 安装WSLg</h1>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">## 更新所有的源</span></span><br><span class="line">sudo apt update</span><br><span class="line"></span><br><span class="line"><span class="comment">## Gedit</span></span><br><span class="line">sudo apt install gedit -y</span><br></pre></td></tr></table></figure>
+<p>在vscode中可以运行matplotlib：<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/Pasted%2520image%252020221121213950.png" alt="" /></p>
+]]></content>
+      <categories>
+        <category>Misc</category>
+      </categories>
   </entry>
   <entry>
     <title>环境配置问题</title>
@@ -1401,6 +1378,32 @@ H表示共轭转置，共轭转置的步骤：</p>
 ]]></content>
       <categories>
         <category>Misc</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>第一次参加机器学习比赛经验</title>
+    <url>/2023/02/04/Machine%20Learning/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8F%82%E5%8A%A0%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%AF%94%E8%B5%9B%E7%BB%8F%E9%AA%8C/</url>
+    <content><![CDATA[<h1 id="好特征比好模型重要"><a class="markdownIt-Anchor" href="#好特征比好模型重要"></a> 好特征比好模型重要</h1>
+<p>在比赛中，有两个维度来看待特征和数据的关系：</p>
+<ol>
+<li>训练集和测试集的特征是否相同？<br />
+对于那些特征分布不同的特征，我们需要加以修改，比如给定一个bool值，设置区间进行判断，或者直接drop分布不同的特征（因为添加他们可能在训练集上效果好，但是在测试集上是欠拟合的）</li>
+<li>训练集中是否有异常的特征数据？<br />
+异常的特征数据会扰乱我们的模型，因此我们需要将它们完全剔除</li>
+</ol>
+<h1 id="几个模型比一个模型好"><a class="markdownIt-Anchor" href="#几个模型比一个模型好"></a> 几个模型比一个模型好</h1>
+<p>如果一个模型的泛化性能很差，可以考虑不同的几个模型，放在一起设置权重预测，就像这样（请忽略这段代码的冗余，关注它们放在一起预测的思想）：<br />
+<img data-src="https://obsidian-pic-1258776558.cos.ap-nanjing.myqcloud.com/blog/20230204205744.png" alt="image.png" /></p>
+<h1 id="线下baseline很重要"><a class="markdownIt-Anchor" href="#线下baseline很重要"></a> 线下baseline很重要</h1>
+<ol>
+<li>如果可以交叉验证，那就使用交叉验证</li>
+<li>如果模型过拟合，要及时停止，或者调整参数</li>
+</ol>
+<h1 id="多打比赛挺有意思"><a class="markdownIt-Anchor" href="#多打比赛挺有意思"></a> 多打比赛，挺有意思</h1>
+<p>第一次参加，有很多不足的地方，以后可以多参加，能学到不少东西！</p>
+]]></content>
+      <categories>
+        <category>Machine Learning</category>
       </categories>
   </entry>
 </search>

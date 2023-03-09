@@ -28,7 +28,7 @@
       </categories>
   </entry>
   <entry>
-    <title></title>
+    <title>健身计划</title>
     <url>/2023/03/09/Misc/%E5%81%A5%E8%BA%AB%E8%AE%A1%E5%88%92/</url>
     <content><![CDATA[<h1 id="起因"><a class="markdownIt-Anchor" href="#起因"></a> 起因</h1>
 <p>看到网上一位博主使用Chat-GPT来生成健身计划，我也想来玩玩，看看健身计划是否有效</p>
@@ -99,9 +99,9 @@
 <h1 id="训练安排"><a class="markdownIt-Anchor" href="#训练安排"></a> 训练安排</h1>
 <p>以1个月为周期，在这1个月中，我将严格按照计划执行，然后看看之后的成效！</p>
 ]]></content>
-      <categories>
-        <category>Misc</category>
-      </categories>
+      <tags>
+        <tag>just_for_fun</tag>
+      </tags>
   </entry>
   <entry>
     <title>最优化理论</title>
